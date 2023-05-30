@@ -7,7 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-a {
+a, .button__news {
     cursor: url(./img/cursor_white.svg), pointer;
 }
 
@@ -453,10 +453,11 @@ color: #00A7D2;
 .network {
     margin-top: 100px;
     max-width: 956px;
-    height: 500px;
+    height: 432px;
     margin-left: auto;
     margin-right: auto;
     background-image: url(./img/Group4.svg);
+    background-size: 357px 354px;
     background-repeat: no-repeat;
     padding-top: 10px;
     padding-left: 444px;
@@ -511,4 +512,89 @@ color: #282828;
 .link__button:hover {
     background: #00D3F0;
     
+}
+.news {
+    max-width: 1920px;
+    background-color:#101425 ;
+    margin: auto;
+}
+.box__news {
+    display: flex;
+    padding-left: calc(50% - 1400px / 2);
+    padding-right: calc(50% - 1400px / 2);
+    justify-content: space-between;
+    height: 205px;
+}
+.logo__news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:22px;
+}
+.image__news {
+    width: 109px;
+  
+}
+
+.title__news {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 42px;
+letter-spacing: -0.01em;
+color: #FFFFFF;
+}
+.text__news {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+.com__news {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+.mail__news {
+    font-family: 'Poppins';
+    outline: none;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.19);
+    background-image: url(./img/IconMail.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 16px;
+    border-radius: 2px;
+    border-style: none;
+    padding-left: 44px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    opacity: 0.6;   
+}
+.button__news {
+font-family: 'Poppins';
+height: 44px;
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+line-height: 22px;
+letter-spacing: -0.41px;
+background: #00A7D2;
+border-radius: 2px;
+color: #FFFFFF;
+border-style: none;
+
+}
+.button__news:hover {
+    background: #00D3F0;
+
 }

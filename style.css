@@ -7,7 +7,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-a, .button__news {
+a,
+.button__news {
   cursor: url(./img/cursor_white.svg), pointer;
 }
 
@@ -196,26 +197,13 @@ a, .button__news {
   gap: 14px;
   max-width: 355px;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-}
-
-.title__button {
-  width: 164px;
-  height: 48px;
-  border-radius: 2px;
-  background-color: #00A7D2;
-  text-align: center;
-}
-
-.title__button:hover {
-  background-color: #00D3F0;
 }
 
 .text__button {
   font-family: "Source Sans Pro";
   text-decoration: none;
-  padding: 13px;
+  padding: 13px 42px;
   display: block;
   font-style: normal;
   font-weight: 600;
@@ -223,11 +211,20 @@ a, .button__news {
   line-height: 22px;
   letter-spacing: -0.41px;
   color: #FFFFFF;
+  border-radius: 2px;
+  background-color: #00A7D2;
+}
+
+.text__button:hover {
+  background-color: #00D3F0;
 }
 
 .play__link {
   font-family: "Source Sans Pro";
   padding: 13px 23px 13px 56px;
+  background-position: 23px;
+  background-image: url(./img/play.svg);
+  background-repeat: no-repeat;
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
@@ -239,15 +236,6 @@ a, .button__news {
 
 .play__link:hover {
   color: #00D3F0;
-}
-
-.play__image {
-  background-position: 23px;
-  background-image: url(./img/play.svg);
-  background-repeat: no-repeat;
-}
-
-.play__image:hover {
   background-image: url(./img/play_light.svg);
 }
 
@@ -632,4 +620,184 @@ a, .button__news {
   text-align: center;
   padding-top: 109px;
   padding-bottom: 95px;
+}
+
+.integrations {
+  padding-left: calc(50% - 620px);
+  padding-right: calc(50% - 620px);
+  display: flex;
+  justify-content: space-between;
+  gap: 46px;
+}
+
+.integrations__box {
+  padding-left: 40px;
+  width: 330px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 15px 19px rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+  height: 425px;
+}
+
+.box-cex {
+  background: url(./img/back_cex1.svg) bottom left no-repeat, url(./img/back_cex.svg) top right no-repeat;
+}
+
+.box-staking {
+  background: url(./img/line.svg) center no-repeat;
+}
+
+.box-DeFi {
+  background: url(./img/test.svg) center no-repeat;
+}
+
+.integration__heading {
+  padding-top: 52px;
+  padding-bottom: 98px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 114.5%;
+  color: #101425;
+}
+
+.frame-group {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.group__link {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.group__link:hover {
+  cursor: url(./img/cursor_black.svg), pointer;
+  text-decoration: underline;
+}
+
+.group__img {
+  width: 32px;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.trinity {
+  padding-top: 48px;
+  padding-bottom: 100px;
+  display: flex;
+  gap: 65px;
+  padding-left: calc(50% - 720px);
+  padding-right: calc(50% - 720px);
+  margin-top: 39px;
+}
+
+.techPaper {
+  width: 538px;
+  height: 386px;
+  background-image: url(./img/TechPaper.png);
+  background-repeat: no-repeat;
+}
+
+.techPaper__button {
+  background-image: url(./img/download.svg);
+  background-repeat: no-repeat;
+  margin-top: 317px;
+  margin-left: 436px;
+  margin-right: 42px;
+  text-align: center;
+  background-position: top;
+  padding-top: 52px;
+}
+
+.techPaper__button:hover {
+  background-image: url(./img/download1.svg);
+}
+
+.download__button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration-line: underline;
+  color: #00A7D2;
+  padding-top: 58px;
+  cursor: url(./img/cursor_black.svg), pointer;
+}
+
+.download__button:hover {
+  color: #00D3F0;
+}
+
+.protocol {
+  width: 650px;
+  padding-top: 57px;
+  background-image: url(./img/trinity-network.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 110px;
+}
+
+.protocol-title {
+  max-width: 601px;
+  margin-bottom: 42px;
+}
+
+.protocol-header_color {
+  color: #EA0054;
+}
+
+.protocol__trinity {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.trinity-textButton {
+  border-radius: 2px;
+  background-color: #00A7D2;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  text-decoration: none;
+  padding: 11px 20px;
+  display: block;
+  color: #FFFFFF;
+  cursor: url(./img/cursor_black.svg), pointer;
+}
+
+.trinity-textButton:hover {
+  background-color: #00D3F0;
+}
+
+.github__link {
+  background-image: url(./img/github.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #00A7D2;
+  padding: 8px 30px;
+  text-decoration: none;
+  cursor: url(./img/cursor_black.svg), pointer;
+}
+
+.github__link:hover {
+  color: #00D3F0;
+  background-image: url(./img/github1.svg);
 }/*# sourceMappingURL=style.css.map */

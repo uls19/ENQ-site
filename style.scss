@@ -161,9 +161,9 @@ a,
     cursor: url(./img/cursor_black.svg), pointer;
 }
 
-/* .lang__link_active {
-
-} */
+.lang__link_active {
+    text-decoration: underline;
+} 
 
 .lang__image {
     vertical-align: middle;
@@ -662,7 +662,7 @@ a,
 .integrations-title {
     text-align: center;
     padding-top: 109px;
-    padding-bottom: 95px;
+    padding-bottom: 43px;
 
 }
 
@@ -746,7 +746,6 @@ a,
     gap: 65px;
     padding-left: calc(50% - 1440px / 2);
     padding-right: calc(50% - 1440px / 2);
-    margin-top: 39px;
 }
 
 .techPaper {
@@ -974,15 +973,18 @@ border-style: none;
     cursor: url(./img/cursor_black.svg), pointer; 
 }
 .token {
+    background-image: url(./img/token.png);
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
     margin-top: 57px;
-    padding-left: calc(50% - 1220px / 2);
-    padding-right: calc(50% - 1220px / 2); 
-    display: flex;
-    gap: 68px;
+    max-width: 760px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 468px;
 }
 .token__content {
     padding-top: 75px;
-    width: 750px;
 }
 
 .token__text {
@@ -1012,8 +1014,7 @@ opacity: 0.64;
 }
 .box__image {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap:52px;
 }
 .community__network {
     padding-left: calc(50% - 920px / 2);
@@ -1149,7 +1150,7 @@ color: #101425;
     background: #101425;
     margin: 0 auto;
     height: 468px;
-    margin-bottom: 100px;
+    
 }
 .footer__content {
     display: grid;
@@ -1161,8 +1162,8 @@ color: #101425;
     "system__box system__box system__box . footer__box3";
     padding-top: 55px;
     padding-bottom: 20px;
-    padding-left: calc(50% - 1440px / 2);
-    padding-right: calc(50% - 1440px / 2);
+    padding-left: calc(50% - 1400px / 2);
+    padding-right: calc(50% - 1400px / 2);
    
 
 }
@@ -1280,8 +1281,6 @@ background-position: 24px center;
         "miner miner miner miner"
         "web ios wallet pwa";
     
-  
-
 }
 .link-web {
     padding: 12px 29px 12px 60px; 
@@ -1318,5 +1317,679 @@ font-size: 13px;
 line-height: 20px;
 color: #BDBDBD;
 padding-top: 20px;
-padding-left: calc(50% - 1440px / 2);
+padding-left: calc(50% - 1400px / 2);
 }
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+    .hovers {
+        padding-left: calc(50% - 600px);
+        padding-right: calc(50% - 600px);
+    } 
+.hovers__header {
+    padding-left: calc(50% - 580px);
+    padding-right: calc(50% - 580px);
+}
+
+.items {
+    max-width: 1440px;
+}
+  
+.items__node {
+    padding-left: calc(50% - 590px);
+    padding-right: calc(50% - 580px);
+}
+.container-grid {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    grid-column-gap: 47px;
+}
+.network {
+    max-width: 810px;
+    padding-left: 407px;
+}
+.news {
+    max-width: 1440px;
+}
+.box__news {
+   padding-left: calc(50% - 610px);
+    padding-right: calc(50% - 600px);  
+}
+.ecosystem {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    gap: 48px;
+}
+.integrations {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+.trinity {
+padding-left: calc(50% - 620px);
+padding-right: calc(50% - 620px);
+}
+
+.token {
+    background-size: 326px;
+    margin-top: 86px;
+    height: 326px;
+    padding-left: 360px;  
+   
+}
+.token__content {
+    padding-top: 38px;
+}
+.community__network-title {
+    padding-top: 134px;
+}
+.footer__content {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    grid-template-columns: 280px 230px 216px 220px 250px;
+}
+.footer__end {
+    padding-left: calc(50% - 600px);
+}
+}
+    
+
+@media screen and (max-width:1248px) {
+    .hovers {
+        padding-left: calc(50% - 496px);
+        padding-right: calc(50% - 496px);
+        height: 568px;
+    }
+
+    .hovers__header {
+            padding-left: calc(50% - 470px);
+            padding-right: calc(50% - 470px);
+    }
+    .logo__image {
+        width: 100px;
+    }  
+    .nav {
+        gap: 30px;
+    }
+    .menu {
+        gap: 46px;
+    }
+    .menu__link {
+        font-size: 14px;
+        line-height: 21px;     
+}
+.title {
+    padding-left: calc(50% - 470px);
+    max-width: 504px;
+    margin-top: 60px;
+}
+.title__header {
+font-size: 32px;
+line-height: 48px;
+}
+.title__text {
+    padding-bottom: 32px;
+}
+.image-mouse {
+    padding-top: 73px;
+    padding-bottom: 20px;
+}
+.items {
+    max-width: 1248px;
+}
+.items__quantity {
+    font-size: 36px;
+    line-height: 54px;
+}
+.items__node {
+    height: 152px;
+    padding-left: calc(50% - 470px);
+    padding-right: calc(50% - 475px);
+}
+.container-grid {
+    padding-left: calc(50% - 470px);
+    padding-right: calc(50% - 470px);
+    grid-column-gap: 0px;
+}
+
+.container__header {
+    font-size: 32px;
+    line-height: 48px;
+    padding-bottom: 56px;
+    padding-top: 48px;
+}
+
+
+
+.container {
+    font-size: 32px;
+    line-height: 48px;
+    
+}
+.content__mobile, .content__decentralized, .content__scalable {
+    padding-right: 20px;
+}
+.content__friendly, .content__borderless {
+    padding-left: 20px;
+}
+.box {
+    max-width: 470px;
+
+}
+.network {
+    max-width: 650px;
+    padding-left: 300px;
+    background-size: 286px 284px;
+    margin-top: 66px;
+    height: 386px;
+}
+.network__button {
+    margin-top: 64px;
+}
+.news {
+    max-width: 1248px;
+}
+.box__news {
+    padding-left: calc(50% - 490px);
+    padding-right: calc(50% - 470px);
+
+
+}
+.ecosystem-title {
+    padding-top: 43px;
+    padding-bottom: 56px;
+
+}
+.ecosystem {
+    padding-left: calc(50% - 330px);
+    padding-right: calc(50% - 330px);
+    gap: 55px;
+    justify-content: space-between;
+}
+.integrations {
+    padding-left: calc(50% - 470px);
+    padding-right: calc(50% - 470px);
+    gap: 24px;
+}
+.integrations-title {
+    text-align: center;
+    padding-top: 76px;
+    padding-bottom: 40px;
+}
+.integrations__box {
+    padding-left: 25px;
+    width: 297px;
+    height: 352px;
+}
+.integration__heading {
+    padding-top: 22px;
+    padding-bottom: 68px;
+}
+.trinity {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 26px;
+    padding-left: calc(50% - 480px);
+    padding-right: calc(50% - 480px);
+    
+}
+
+.techPaper {
+     width: 373px; 
+    height: 267px; 
+    background-size: cover;
+
+}
+
+.techPaper__button {
+    
+    margin-top: 221px;
+    margin-left: 250px;
+    margin-right: 47px;
+
+}
+.protocol {
+    width: 560px;
+    padding-top: 48px;
+    background-position-y: 54px;
+
+}
+.protocol-title {
+    max-width: 458px;
+    margin-bottom: 100px;
+
+}
+.projects-title {
+    padding-bottom: 46px;
+
+}
+.projects__items {
+    padding-left: calc(50% - 470px);
+    padding-right: calc(50% - 470px);
+    grid-column-gap: 24px;
+    
+
+}
+.link__item {
+    font-size: 18px;
+    line-height: 27px;
+    background-position: 16px;
+    padding-left: 68px;
+    padding-right: 20px;
+    width: 206px;
+   
+}
+
+.item__text {
+font-size: 14px;
+line-height: 21px;
+
+}
+.services {
+    padding-left: calc(50% - 370px);
+    padding-right: calc(50% - 360px);
+    padding-top: 100px;
+
+}
+.token {
+        background-size: 229px;
+        margin-top: 100px;
+        height: 229px;
+        padding-left: 270px;
+        max-width: 660px;
+    }
+
+.token__content {
+    padding-top: 10px;
+}
+.token__text {
+    gap: 47px;
+
+}
+.box__image {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 54px;
+}
+
+.item__image {
+    width:91px;
+    height:42px ;
+}
+.item__image1 {
+    width: 144px;
+    height: 42px;
+    
+}
+.item__image2 {
+    width: 67px;
+    height: 42px;
+
+}
+
+.community__network {
+    padding-left: calc(50% - 372px);
+    padding-right: calc(50% - 372px);
+    margin-bottom: 52px;
+}
+
+.community__network-title {
+    padding-top: 135px;
+}
+
+.footer {
+    max-width: 1440px;
+    height: 590px;
+}
+.footer__content {
+    padding-left: calc(50% - 470px);
+    padding-right: calc(50% - 470px);
+    grid-template-columns: 200px 30px 220px 240px 250px;
+    grid-template-areas:
+        "footer__box0 . footer__box1 footer__box2 footer__box3"
+        "system__box system__box system__box system__box system__box";
+}
+
+.footer__image {
+    width: 174px;
+}
+
+.system__box {
+    padding-top: 0px;
+
+}
+.footer__line {
+    width: 1248px;
+
+}
+.footer__end {
+    padding-bottom: 20px;
+    padding-left: calc(50% - 470px);
+}
+}
+
+
+@media screen and (max-width:984px){
+    .hovers {
+        padding-left: calc(50% - 350px);
+        padding-right: calc(50% - 350px);
+    }
+
+    .hovers__header {
+        padding-left: calc(50% - 350px);
+        padding-right: calc(50% - 350px);
+    }
+    .nav {
+        display: none;
+}
+.items {
+    max-width: 984px;
+}
+.items__quantity {
+    font-size: 24px;
+    line-height: 36px;
+}
+.items__node {
+    height: 128px;
+    padding-left: calc(50% - 320px);
+    padding-right: calc(50% - 320px);
+}
+.text {
+    font-size: 14px;
+    line-height: 21px;
+}
+.container-grid {
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+    grid-template-columns: 323px 80px 296px;
+    grid-row-gap: 44px;
+    grid-template-areas:
+        "header header header"
+        "mobile mobile mobile_jpg"
+        "friendly_jpg friendly friendly"
+        "decentralized decentralized decentralized_jpg"
+        "borderless_jpg borderless borderless"
+        "scalable scalable scalable_jpg";
+}
+.container__header {
+    padding-bottom: 0px;
+    padding-top: 72px;
+}
+.item {
+    padding-top: 26px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    line-height: 42px;
+}
+.content__mobile, .content__decentralized, .content__scalable {
+    padding-right: 20px;
+}
+.content__friendly, .content__borderless {
+    padding-right: 20px;
+    padding-left: 0px;}
+
+.box {
+    max-width: 296px;
+    height: 326px;
+}
+
+.mobile {
+    background-image: url(./img/mobile1.png);
+    
+}
+
+.friendly {
+    background-image: url(./img/friendly1.png);
+    
+}
+
+.decentralized {
+    background-image: url(./img/decentralized1.png);
+    
+}
+
+.borderless {
+    background-image: url(./img/borderless1.png);
+    
+}
+
+.scalable {
+    background-image: url(./img/scalable1.png);
+    
+}
+.network {
+    padding-left: calc(50% - 238px);
+    padding-right: calc(50% - 350px);
+    background-size: 358px 355px;
+    margin-top: 66px;
+    height: 386px;
+    overflow: hidden;
+    background-position: calc(50% - 430px) 0;
+    padding-bottom: 35px;
+}
+.news {
+    max-width: 984px;
+}
+.box__news {
+    padding-left: calc(50% - 360px);
+    padding-right: calc(50% - 346px);
+    height: 157px;
+}
+.logo__news {
+    gap: 18px;
+}
+
+.image__news {
+    width: 54px;
+}
+.title__news {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    
+}
+.text__news {
+    font-size: 15px;
+    line-height: 127%;
+    letter-spacing: 0.01em;
+    opacity: 0.8;
+
+
+   }
+    .com__news {
+    width: 256px;
+    
+}
+.ecosystem-title {
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.ecosystem {
+    padding-left: calc(50% - 300px);
+    padding-right: calc(50% - 300px);
+    justify-content: space-between;
+    row-gap: 60px;
+
+}
+.integrations-title {
+    padding-top: 64px;
+    padding-bottom: 36px;
+
+}
+.integrations {
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+
+}
+.integrations__box {
+    padding-left: 19px;
+    width: 196px;
+    height: 256px;
+
+}
+.box-cex {
+background: url(./img/back_cex1.svg) bottom left no-repeat;
+}
+.integration__heading {
+    padding-top: 16px;
+    padding-bottom: 36px;
+    font-size: 20px;
+}
+.group__img {
+    width: 21px;
+
+}
+.group__link {
+    font-size: 16px;
+    line-height: 24px;
+    
+}
+
+.techPaper {
+    width: 233px;
+    height: 167px;
+
+}
+.trinity {
+    padding-top: 80px;
+    padding-bottom: 84px;
+    gap: 26px;
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+    
+}
+
+.techPaper {
+    width: 233px;
+    height: 167px;
+
+}
+
+.techPaper__button {
+    
+    margin-top: 160px;
+    margin-left: 143px;
+    margin-right: 30px;
+
+}
+
+.protocol {
+    width: 440px;
+    padding-top: 0px;
+    background-position-y: 30px;
+    background-size: 138px 111px;
+
+}
+.protocol-title {
+    max-width: 410px;
+    margin-bottom: 31px;
+
+}
+.projects__items {
+    height: 260px;
+    padding-left: calc(50% - 315px);
+    padding-right: calc(50% - 315px);
+    gap: 28px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+.link__item {
+    width: 210px;
+}
+.services {
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+    padding-top: 76px;
+}
+
+.service-title {
+    padding-bottom: 54px;
+
+}
+.token {
+        padding-left: calc(50% - 200px);
+        padding-right: calc(50% - 350px);
+        background-size: 284px;
+        margin-top: 86px;
+        height: 284px;
+        overflow: hidden;
+        background-position: calc(50% - 376px) 0;
+    }
+
+.token__text {
+    gap: 20px;
+}
+.item__image {
+    width: 83px;
+    height: 36px;
+}
+.item__image1 {
+    width: 124px;
+    height: 36px;
+}
+.item__image2 {
+    width: 58px;
+    height: 36px;
+}
+.community__network {
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+    margin-bottom: 76px;
+}
+
+.community__images {
+    display: flex;
+    gap: 56px;
+    justify-content: center;
+}
+.footer {
+    max-width: 1248px;
+    height: 616px;
+}
+.footer__content {
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+    grid-template-columns: 210px 240px 250px;
+    grid-template-areas:
+        "footer__box1 footer__box2 footer__box3"
+        "system__box system__box system__box";
+}
+
+.footer__image {
+    display: none;
+}
+.system__box {
+    grid-template-columns: 144px 136px 168px 202px;
+    gap: 16px;
+}
+.system__link-footer {
+    font-size: 14px;
+    line-height: 21px;
+    
+}
+
+.link-web, .link-ios, .link-wallet, 
+.link-pwa  {
+    padding: 12px 15px 12px 45px;
+    background-position: 18px center;
+}
+.footer__end {
+    padding-left: calc(50% - 350px);
+}
+}
+
+
+
+
+
+
+
+
+
+

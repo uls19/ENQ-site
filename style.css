@@ -15,8 +15,9 @@ a,
 .hovers {
   padding-left: calc(50% - 960px);
   padding-right: calc(50% - 960px);
-  height: 718px;
+  height: 716px;
   background-image: url(./img/iPhone\ 14\ Pro.jpg);
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -43,14 +44,6 @@ a,
           backdrop-filter: blur(17.5px);
 }
 
-@media screen and (max-width: 1920px) {
-  .hovers__header {
-    left: 0;
-    right: 0;
-    padding-left: calc(50% - 698px);
-    padding-right: calc(50% - 698px);
-  }
-}
 .header__empty {
   height: 82px;
 }
@@ -263,7 +256,7 @@ a,
 
 .items {
   max-width: 1920px;
-  margin: auto;
+  margin: 0 auto;
   background: #101425;
 }
 
@@ -694,37 +687,27 @@ a,
 }
 
 .trinity {
-  padding-top: 48px;
+  max-width: 950px;
+  padding-top: 80px;
   padding-bottom: 100px;
   display: flex;
   gap: 65px;
-  padding-left: calc(50% - 720px);
-  padding-right: calc(50% - 720px);
-}
-
-.techPaper {
-  width: 538px;
-  height: 386px;
+  margin: 0 auto;
   background-image: url(./img/TechPaper.png);
   background-repeat: no-repeat;
+  background-size: 538px 386px;
+  background-position: left 50px;
+  padding-left: 420px;
 }
 
 .techPaper__button {
-  background-image: url(./img/download.svg);
-  background-repeat: no-repeat;
-  margin-top: 317px;
-  margin-left: 436px;
-  margin-right: 42px;
+  padding-top: 376px;
   text-align: center;
-  background-position: top;
-  padding-top: 52px;
-}
-
-.techPaper__button:hover {
-  background-image: url(./img/download1.svg);
 }
 
 .download__button {
+  background-image: url(./img/download.svg);
+  background-repeat: no-repeat;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
@@ -737,6 +720,7 @@ a,
 }
 
 .download__button:hover {
+  background-image: url(./img/download1.svg);
   color: #00D3F0;
 }
 
@@ -1001,6 +985,7 @@ a,
 .community__images {
   display: flex;
   justify-content: space-between;
+  background-position: center;
 }
 
 .community__image1 {
@@ -1010,11 +995,11 @@ a,
   background-repeat: no-repeat;
   position: relative;
   background-position: center;
+  transition-duration: 0.2s;
 }
 
 .community__image1:hover {
   background-image: url(./img/twitter_blue.svg);
-  transition-duration: 0.2s;
 }
 
 .community__image2 {
@@ -1120,7 +1105,7 @@ a,
   justify-items: start;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "footer__box0 . footer__box1 footer__box2 footer__box3" "system__box system__box system__box . footer__box3";
+  grid-template-areas: "footer__box0 . footer__box1 footer__box2 footer__box3" "box box box . footer__box3";
   padding-top: 55px;
   padding-bottom: 20px;
   padding-left: calc(50% - 700px);
@@ -1239,6 +1224,11 @@ a,
   border-radius: 9px;
 }
 
+.system__link-footer:hover {
+  background-color: #00A7D2;
+  transition-duration: 0.3s;
+}
+
 .link-miner {
   padding: 12px 20px 12px 50px;
   background-image: url(./img/android.svg);
@@ -1246,7 +1236,7 @@ a,
 }
 
 .system__box {
-  grid-area: system__box;
+  grid-area: box;
   display: grid;
   grid-template-columns: 180px 180px 180px 220px;
   grid-template-rows: 48px 48px;
@@ -1281,7 +1271,7 @@ a,
 }
 
 .footer__line {
-  width: 1440px;
+  max-width: 1440px;
   height: 1px;
   background: rgba(255, 255, 255, 0.11);
   margin: auto;
@@ -1298,6 +1288,14 @@ a,
   padding-left: calc(50% - 700px);
 }
 
+@media screen and (max-width: 1920px) {
+  .hovers__header {
+    left: 0;
+    right: 0;
+    padding-left: calc(50% - 698px);
+    padding-right: calc(50% - 698px);
+  }
+}
 @media screen and (max-width: 1440px) {
   .hovers {
     padding-left: calc(50% - 600px);
@@ -1307,11 +1305,14 @@ a,
     padding-left: calc(50% - 580px);
     padding-right: calc(50% - 580px);
   }
+  .title {
+    padding-left: calc(50% - 580px);
+  }
   .items {
     max-width: 1440px;
   }
   .items__node {
-    padding-left: calc(50% - 590px);
+    padding-left: calc(50% - 580px);
     padding-right: calc(50% - 580px);
   }
   .container-grid {
@@ -1340,8 +1341,9 @@ a,
     padding-right: calc(50% - 600px);
   }
   .trinity {
-    padding-left: calc(50% - 620px);
-    padding-right: calc(50% - 620px);
+    max-width: 810px;
+    background-size: 458px 328px;
+    background-position: left 130px;
   }
   .token {
     background-size: 326px;
@@ -1486,21 +1488,16 @@ a,
     padding-bottom: 68px;
   }
   .trinity {
-    padding-top: 80px;
+    max-width: 700px;
+    background-size: 373px 267px;
+    padding-top: 65px;
     padding-bottom: 80px;
-    gap: 26px;
-    padding-left: calc(50% - 480px);
-    padding-right: calc(50% - 480px);
-  }
-  .techPaper {
-    width: 373px;
-    height: 267px;
-    background-size: cover;
+    padding-left: 270px;
+    background-position: left 70px;
   }
   .techPaper__button {
-    margin-top: 221px;
-    margin-left: 250px;
-    margin-right: 47px;
+    padding-top: 270px;
+    text-align: center;
   }
   .protocol {
     width: 560px;
@@ -1536,12 +1533,20 @@ a,
     padding-right: calc(50% - 360px);
     padding-top: 100px;
   }
+  .service-title {
+    font-size: 36px;
+    line-height: 47.88px;
+  }
   .token {
     background-size: 229px;
     margin-top: 100px;
     height: 229px;
     padding-left: 270px;
     max-width: 660px;
+  }
+  .token-title {
+    font-size: 36px;
+    line-height: 54px;
   }
   .token__content {
     padding-top: 10px;
@@ -1572,9 +1577,6 @@ a,
     padding-right: calc(50% - 372px);
     margin-bottom: 52px;
   }
-  .community__network-title {
-    padding-top: 135px;
-  }
   .footer {
     max-width: 1440px;
     height: 590px;
@@ -1583,7 +1585,7 @@ a,
     padding-left: calc(50% - 470px);
     padding-right: calc(50% - 470px);
     grid-template-columns: 200px 30px 220px 240px 250px;
-    grid-template-areas: "footer__box0 . footer__box1 footer__box2 footer__box3" "system__box system__box system__box system__box system__box";
+    grid-template-areas: "footer__box0 . footer__box1 footer__box2 footer__box3" "box box box box box";
   }
   .footer__image {
     width: 174px;
@@ -1592,7 +1594,7 @@ a,
     padding-top: 0px;
   }
   .footer__line {
-    width: 1248px;
+    max-width: 1248px;
   }
   .footer__end {
     padding-bottom: 20px;
@@ -1753,18 +1755,13 @@ a,
   .trinity {
     padding-top: 80px;
     padding-bottom: 84px;
-    gap: 26px;
-    padding-left: calc(50% - 350px);
-    padding-right: calc(50% - 350px);
-  }
-  .techPaper {
-    width: 233px;
-    height: 167px;
+    background-size: 233px 167px;
+    max-width: 550px;
+    padding-left: 152px;
+    gap: 29px;
   }
   .techPaper__button {
-    margin-top: 160px;
-    margin-left: 143px;
-    margin-right: 30px;
+    padding-top: 212px;
   }
   .protocol {
     width: 440px;
@@ -1794,6 +1791,8 @@ a,
   }
   .service-title {
     padding-bottom: 54px;
+    font-size: 32px;
+    line-height: 45.56px;
   }
   .token {
     padding-left: calc(50% - 200px);
@@ -1804,8 +1803,15 @@ a,
     overflow: hidden;
     background-position: calc(50% - 376px) 0;
   }
+  .token-title {
+    font-size: 32px;
+    line-height: 48px;
+  }
   .token__text {
     gap: 20px;
+  }
+  .box__image {
+    gap: 22px;
   }
   .item__image {
     width: 83px;
@@ -1837,7 +1843,7 @@ a,
     padding-left: calc(50% - 350px);
     padding-right: calc(50% - 350px);
     grid-template-columns: 210px 240px 250px;
-    grid-template-areas: "footer__box1 footer__box2 footer__box3" "system__box system__box system__box";
+    grid-template-areas: "footer__box1 footer__box2 footer__box3" "box box box";
   }
   .footer__image {
     display: none;
@@ -1857,5 +1863,485 @@ a,
   }
   .footer__end {
     padding-left: calc(50% - 350px);
+  }
+}
+@media screen and (max-width: 744px) {
+  .hovers {
+    padding-left: calc(50% - 300px);
+    padding-right: calc(50% - 300px);
+  }
+  .hovers__header {
+    padding-left: calc(50% - 270px);
+    padding-right: calc(50% - 270px);
+  }
+  .logo__image {
+    width: 96px;
+    padding-left: 10px;
+  }
+  .title {
+    padding-left: calc(50% - 270px);
+    padding-right: calc(50% - 270px);
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+  .title__header {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .started {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .items__node {
+    padding-left: calc(50% - 270px);
+    padding-right: calc(50% - 270px);
+    margin: 0 10px;
+  }
+  .items__quantity {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .container-grid {
+    max-width: 530px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: none;
+    grid-row-gap: 0px;
+    grid-template-areas: "header" "mobile_jpg" "mobile" "friendly_jpg" "friendly" "decentralized_jpg" "decentralized" "borderless_jpg" "borderless" "scalable_jpg" "scalable";
+  }
+  .container__header {
+    padding-top: 32px;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 20px;
+  }
+  .box {
+    max-width: 529px;
+    height: 280px;
+  }
+  .item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .paragraph {
+    padding-bottom: 40px;
+  }
+  .mobile {
+    background-image: url(./img/mobile744.png);
+  }
+  .friendly {
+    background-image: url(./img/friendly744.png);
+  }
+  .decentralized {
+    background-image: url(./img/decentralized744.png);
+  }
+  .borderless {
+    background-image: url(./img/borderless744.png);
+  }
+  .scalable {
+    background-image: url(./img/scalable744.png);
+  }
+  .network {
+    padding-left: calc(50% - 130px);
+    padding-right: calc(50% - 270px);
+    margin-top: 0px;
+    height: auto;
+    overflow: hidden;
+    background-position: calc(50% - 336px) 0;
+    padding-bottom: 57px;
+  }
+  .header {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .network__button {
+    margin-top: 56px;
+  }
+  .news {
+    max-width: 774px;
+  }
+  .box__news {
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+    padding-left: calc(50% - 270px);
+    padding-right: calc(50% - 270px);
+    height: 288px;
+    margin: 0 10px;
+  }
+  .logo__news {
+    justify-content: flex-start;
+  }
+  .com__news {
+    width: auto;
+  }
+  .ecosystem-title {
+    padding-top: 24px;
+    padding-bottom: 45px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .ecosystem {
+    padding-left: calc(50% - 300px);
+    padding-right: calc(50% - 300px);
+    justify-content: center;
+    row-gap: 40px;
+    -moz-column-gap: 14px;
+         column-gap: 14px;
+    margin: 0 10px;
+  }
+  .ecosystem__box {
+    max-width: 250px;
+  }
+  .integrations-title {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .integrations {
+    padding-left: calc(50% - 270px);
+    padding-right: calc(50% - 270px);
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .integrations__box {
+    padding-left: 19px;
+    width: 144px;
+  }
+  .integration__heading {
+    padding-top: 16px;
+    font-size: 16px;
+  }
+  .group__link {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .trinity {
+    padding-top: 72px;
+    padding-bottom: 45px;
+    gap: 26px;
+    padding-left: calc(50% - 230px);
+    padding-right: calc(50% - 256px);
+    background-image: url(./img/TechPaper.png);
+    background-repeat: no-repeat;
+    background-size: 255px 183px;
+    overflow: hidden;
+    background-position: calc(50% - 281px) 50px;
+  }
+  .techPaper__button {
+    padding-top: 175px;
+  }
+  .protocol {
+    width: 400px;
+  }
+  .protocol-title, .projects-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .service-title {
+    font-size: 24px;
+    line-height: 31.92px;
+  }
+  .github__link {
+    padding: 8px 0px;
+    padding-right: 30px;
+  }
+  .projects__items {
+    height: 186px;
+    padding-left: calc(50% - 260px);
+    padding-right: calc(50% - 260px);
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .link__item {
+    background-size: auto 21px;
+    padding-left: 41px;
+    padding-right: 9px;
+    background-position: 9px;
+    height: 48px;
+    width: 200px;
+  }
+  .token-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .token {
+    padding-left: calc(50% - 175px);
+    padding-right: calc(50% - 265px);
+    background-position: calc(50% - 333px) 0;
+  }
+  .token__text {
+    -moz-column-gap: 80px;
+         column-gap: 80px;
+    row-gap: 12px;
+  }
+  .community__network {
+    margin-bottom: 50px;
+  }
+  .community__network-title {
+    font-size: 24px;
+    line-height: 31.92px;
+    padding-top: 70px;
+  }
+  .community__images {
+    gap: 32px;
+  }
+  .footer {
+    max-width: 984px;
+    height: 700px;
+  }
+  .footer__content {
+    padding-left: calc(50% - 275px);
+    padding-right: calc(50% - 275px);
+    grid-template-columns: 120px 160px 250px;
+    padding-bottom: 35px;
+  }
+  .system__box {
+    padding-top: 30px;
+    padding-left: 10px;
+    gap: 13px;
+    grid-template-columns: 144px 50px 176px;
+    grid-template-rows: 48px 48px 48px;
+    grid-template-areas: "miner miner miner" "web ios ios " "pwa pwa wallet";
+  }
+  .footer__end {
+    padding-left: calc(50% - 260px);
+  }
+}
+@media screen and (max-width: 550px) {
+  .title__header {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .integrations__box {
+    padding-left: 19px;
+    width: 268px;
+    height: 352px;
+  }
+  .integration__heading {
+    padding-top: 22px;
+    padding-bottom: 77px;
+    font-size: 18px;
+  }
+  .group__img {
+    width: 27px;
+  }
+  .group__link, .ecosystem__heading, .link__item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .header, .ecosystem-title, .integrations-title, .protocol-title, .projects-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .network {
+    padding-left: calc(50% - 275px);
+    padding-right: calc(50% - 275px);
+    margin-top: 30px;
+    background-size: 239px 236px;
+    background-position-x: center;
+    padding-top: 260px;
+  }
+  .network__button {
+    text-align: center;
+  }
+  .header, .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .trinity {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 72px;
+    padding-bottom: 45px;
+    gap: 26px;
+    padding-left: calc(50% - 160px);
+    padding-right: calc(50% - 160px);
+    background-image: url(./img/TechPaper.png);
+    background-repeat: no-repeat;
+    background-size: 341px 244px;
+    overflow: hidden;
+    background-position: center 44px;
+  }
+  .techPaper__button {
+    padding-left: 152px;
+    padding-top: 220px;
+  }
+  .protocol {
+    text-align: center;
+  }
+  .protocol__trinity {
+    display: flex;
+    flex-direction: column;
+  }
+  .download__button {
+    background-position-x: center;
+  }
+  .token {
+    padding-top: 342px;
+    height: auto;
+    padding-left: calc(50% - 160px);
+    padding-right: calc(50% - 160px);
+    background-position-x: center;
+  }
+  .token__content {
+    text-align: center;
+    padding-top: 0px;
+  }
+  .token-title {
+    padding-top: 0px;
+  }
+  .token__text {
+    flex-direction: column;
+  }
+  .box__image {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .item__image {
+    width: 170px;
+    height: 74px;
+  }
+  .item__image1 {
+    width: 254px;
+    height: 74px;
+  }
+  .item__image2 {
+    width: 119px;
+    height: 74px;
+  }
+  .projects__items {
+    height: 380px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+    justify-items: center;
+  }
+  .link__item {
+    width: 238px;
+  }
+  .service-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .community__images {
+    flex-wrap: wrap;
+  }
+  .footer {
+    max-width: 744px;
+    height: auto;
+  }
+  .footer__box2 {
+    padding-right: 10px;
+  }
+  .footer__content {
+    padding-left: calc(50% - 160px);
+    padding-right: calc(50% - 160px);
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "footer__box1 footer__box2" "footer__box3 footer__box3" "box box ";
+  }
+  .header__box3 {
+    padding-left: 10px;
+  }
+  .system__box {
+    margin: 0 auto;
+    padding-left: 0;
+    grid-template-columns: none;
+    grid-template-rows: repeat(5, 48px);
+    grid-template-areas: "miner" "pwa" "web" "ios" "wallet";
+  }
+  .link-miner {
+    padding: 12px 80px 12px 110px;
+    background-position: 84px center;
+  }
+  .link-pwa {
+    padding: 12px 60px 12px 90px;
+    background-position: 66px center;
+  }
+  .link-web {
+    padding: 12px 89px 12px 119px;
+    background-position: 91px center;
+  }
+  .link-ios {
+    padding: 12px 93px 12px 123px;
+    background-position: 100px center;
+  }
+  .link-wallet {
+    padding: 12px 77px 12px 107px;
+    background-position: 80px center;
+  }
+  .footer__end {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 464px) {
+  .hovers {
+    height: 492px;
+    overflow: hidden;
+  }
+  .title__header {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .title__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .started {
+    flex-direction: column;
+    max-width: 164px;
+  }
+  .play__link {
+    padding: 13px 23px 13px 37px;
+    background-position: 0px;
+  }
+  .image-mouse {
+    display: none;
+  }
+  .items__node {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+    padding-bottom: 50px;
+    gap: 54px;
+  }
+  .items__quantity {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .text__bold {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .text__little {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .news {
+    overflow: hidden;
+  }
+  .system__link-footer, .link__button {
+    white-space: nowrap;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -541,8 +541,8 @@ a,
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
-    opacity: 0.8;
+    color:#817A92;
+    // opacity: 0.8;
 }
 
 .com__news {
@@ -1055,7 +1055,7 @@ color: #101425;
     max-width: 1920px;
     background: #101425;
     margin: 0 auto;
-    height: 468px;
+    height: auto;
     
 }
 .footer__content {
@@ -1227,6 +1227,7 @@ font-size: 13px;
 line-height: 20px;
 color: #BDBDBD;
 padding-top: 20px;
+padding-bottom: 20px;
 padding-left: calc(50% - 1400px / 2);
 }
 
@@ -1558,7 +1559,6 @@ line-height: 21px;
 
 .footer {
     max-width: 1440px;
-    height: 590px;
 }
 .footer__content {
     padding-left: calc(50% - 470px);
@@ -1582,7 +1582,6 @@ line-height: 21px;
 
 }
 .footer__end {
-    padding-bottom: 20px;
     padding-left: calc(50% - 470px);
 }
 }
@@ -1868,7 +1867,6 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 }
 .footer {
     max-width: 1248px;
-    height: 616px;
 }
 .footer__content {
     padding-left: calc(50% - 350px);
@@ -2187,8 +2185,6 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 }
 .footer {
     max-width: 984px;
-    height: 700px;
-
 }
 .footer__content {
     padding-left: calc(50% - 275px);
@@ -2361,7 +2357,6 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 }
 .footer {
 max-width: 744px;
- height: auto;
 }
 .footer__box2 {
     padding-right: 10px;

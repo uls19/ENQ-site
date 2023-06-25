@@ -506,8 +506,7 @@ a,
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.01em;
-  color: #FFFFFF;
-  opacity: 0.8;
+  color: #817A92;
 }
 
 .com__news {
@@ -1021,7 +1020,7 @@ a,
   max-width: 1920px;
   background: #101425;
   margin: 0 auto;
-  height: 468px;
+  height: auto;
 }
 
 .footer__content {
@@ -1209,6 +1208,7 @@ a,
   line-height: 20px;
   color: #BDBDBD;
   padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: calc(50% - 700px);
 }
 
@@ -1502,7 +1502,6 @@ a,
   }
   .footer {
     max-width: 1440px;
-    height: 590px;
   }
   .footer__content {
     padding-left: calc(50% - 470px);
@@ -1520,7 +1519,6 @@ a,
     max-width: 1248px;
   }
   .footer__end {
-    padding-bottom: 20px;
     padding-left: calc(50% - 470px);
   }
 }
@@ -1763,7 +1761,6 @@ a,
   }
   .footer {
     max-width: 1248px;
-    height: 616px;
   }
   .footer__content {
     padding-left: calc(50% - 350px);
@@ -2030,7 +2027,6 @@ a,
   }
   .footer {
     max-width: 984px;
-    height: 700px;
   }
   .footer__content {
     padding-left: calc(50% - 275px);
@@ -2174,7 +2170,6 @@ a,
   }
   .footer {
     max-width: 744px;
-    height: auto;
   }
   .footer__box2 {
     padding-right: 10px;

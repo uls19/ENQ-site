@@ -211,9 +211,11 @@ a,
 .started {
     display: flex;
     gap: 14px;
-    max-width: 355px;
+    max-width: 360px;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+
 }
 
 .text__button {
@@ -233,13 +235,15 @@ a,
 .text__button:hover {
     background-color: $colorHover;
 }
+.started__svg {
+    margin-right: 10px;
+    vertical-align: middle;
+    fill: $colorSelect;
+}
 
 .play__link {
     font-family: 'Source Sans Pro';
-    padding: 13px 23px 13px 56px;
-    background-position: 23px;
-    background-image: url(./img/play.svg);
-    background-repeat: no-repeat;
+    padding: 13px 23px;
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
@@ -250,8 +254,9 @@ a,
 }
 
 .play__link:hover {
-    color: $colorHover;
-    background-image: url(./img/play_light.svg);
+    .started__svg {fill: $colorHover
+    }
+    color:$colorHover; 
 }
 .image-mouse {
     display: flex;
@@ -749,31 +754,34 @@ a,
 }
 
 .techPaper__button {
-    padding-top: 376px;
+    width: 74px;
     text-align: center;
+    padding-top: 320px;
  }
 
 
 
 .download__button {
-    background-image: url(./img/download.svg);
-    background-repeat: no-repeat;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+    padding-top: 20px;
     text-decoration-line: underline;
     color: $colorSelect;
-    padding-top: 58px;
     cursor: url(./img/cursor_black.svg), pointer;
-
-
 }
-.download__button:hover {
-    background-image: url(./img/download1.svg);
-    color: $colorHover;
-   
+.download__svg {
+    fill: $colorSelect; 
+}
+
+.download__button:hover { 
+    .download__svg {
+        fill: $colorHover;
+        transition-duration: 0.2s;
+    } 
+    color: $colorHover; 
 }
 
 .protocol {
@@ -820,11 +828,9 @@ a,
 }
 .trinity-textButton:hover {
     background-color: $colorHover;
+    transition-duration: 0.2s;
 }
 .github__link {
-    background-image: url(./img/github.svg);
-    background-position: right;
-    background-repeat: no-repeat;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -835,10 +841,19 @@ a,
     text-decoration: none;
     cursor: url(./img/cursor_black.svg), pointer;
 }
-.github__link:hover {
-    color:   $colorHover; 
-    background-image: url(./img/github1.svg);   
+.github__link:hover { 
+    .github__svg {
+     fill: $colorHover;
+     transition-duration: 0.2s;
+    }
+    color: $colorHover; 
 }
+.github__svg {
+    vertical-align: middle;
+    margin-left: 10px;
+    fill:#00A7D2;
+}
+
 .projects {
     padding-left: calc(50% - 1440px / 2);
     padding-right: calc(50% - 1440px / 2);
@@ -955,6 +970,7 @@ border-radius: 2px;
 border-style: none;
 }
 .service__button:hover {
+    transition-duration: 0.2s;
     background: $colorHover; 
     cursor: url(./img/cursor_black.svg), pointer; 
 }
@@ -1021,117 +1037,20 @@ color: #101425;
 .community__images {
     display: flex;
     justify-content: space-between; 
-    background-position: center;
+    align-items: center;
 
 
 }
-.community__image1 {
-    width: 48px;
-    height: 40px;
-    background-image: url(./img/twitter_black.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-    transition-duration: 0.2s;
 
-      
-}
-.community__image1:hover {
-    background-image: url(./img/twitter_blue.svg);
-   
-}
-.community__image2 {
-    width: 46px;
-    height: 46px;
-    background-image: url(./img/telegramm_black.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-   
+ .image__svg {  
+     fill: #101425;
+    } 
 
-}
-.community__image2:hover {
-    background-image: url(./img/telegramm_blue.svg); 
-    transition-duration: 0.2s;
-}
-.community__image3 {
-    width: 46px;
-    height: 46px;
-    background-image: url(./img/reddit_black.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-   
-
-}
-.community__image3:hover {
-    background-image: url(./img/reddit_blue.svg); 
-    transition-duration: 0.2s;
-}
-.community__image4 {
-    width: 46px;
-    height: 43px;
-    background-image: url(./img/github_black.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-    
-
-}
-.community__image4:hover {
-    background-image: url(./img/github_blue.svg); 
-    transition-duration: 0.2s;
-}
-.community__image5 {
-    width: 44px;
-    height: 44px;
-    background-image: url(./img/linkedin_black.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-    
-
-}
-.community__image5:hover {
-    background-image: url(./img/linkedin_blue.svg); 
-    transition-duration: 0.2s;
-}
-.community__image6 {
-    width: 45px;
-    height: 36px;
-    background-image: url(./img/youtube_black.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-    
-
-}
-.community__image6:hover {
-    background-image: url(./img/youtube_blue.svg); 
-    transition-duration: 0.2s;
-}
-.community__image7 {
-    width: 48px;
-    height: 42px;
-    background-image: url(./img/weixin_black.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-    
-
-}
-.community__image7:hover {
-    background-image: url(./img/weixin_blue.svg); 
+.image__svg:hover {
+    fill:#00A7D2;
     transition-duration: 0.2s;
 }
 
-.community__link {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-
-}
 .footer {
     max-width: 1920px;
     background: #101425;
@@ -1152,7 +1071,6 @@ color: #101425;
     padding-left: calc(50% - 1400px / 2);
     padding-right: calc(50% - 1400px / 2);
    
-
 }
 .footer__image {
     grid-area: footer__box0;
@@ -1253,7 +1171,7 @@ border-radius: 9px;
 }
 .system__link-footer:hover {
     background-color: $colorSelect;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }
 
 .link-miner {
@@ -1541,8 +1459,7 @@ line-height: 48px;
     background-position: left 70px;   
 }
 .techPaper__button {
-    padding-top: 270px;
-    text-align: center;
+    padding-top: 230px;
 }
     
 .protocol {
@@ -1852,7 +1769,6 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 .techPaper {
     width: 233px;
     height: 167px;
-
 }
 .trinity {
     padding-top: 80px;
@@ -1864,12 +1780,11 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 
     
 }
-
+.github__link { 
+    padding: 8px 20px;
+}
 .techPaper__button {
-    padding-top: 212px;
-    
-
-
+    padding-top: 154px;
 }
 
 .protocol {
@@ -2187,7 +2102,7 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 .trinity {
     padding-top: 72px;
     padding-bottom: 45px;
-    gap: 26px;
+    gap: 14px;
     padding-left: calc(50% - 230px);
     padding-right: calc(50% - 256px);
     background-image: url(./img/TechPaper.png);
@@ -2199,7 +2114,7 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 
 
 .techPaper__button {
-    padding-top: 175px;
+    padding-top: 120px;
 }
 
 .protocol {
@@ -2218,8 +2133,13 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 
 .github__link {
     padding: 8px 0px;
-    padding-right: 30px;
+   
 }
+.github__svg {
+    margin-left: 5px;
+}
+    
+
 .projects__items {
     height: 186px;
     padding-left: calc(50% - 260px);
@@ -2366,8 +2286,8 @@ background: url(./img/back_cex1.svg) bottom left no-repeat;
 
 
 .techPaper__button {
-    padding-left: 152px;
-    padding-top: 220px;
+    padding-left: 180px;
+    padding-top: 160px;
     
 }
 .protocol {
@@ -2515,12 +2435,13 @@ max-width: 744px;
 }
 .started {
     flex-direction: column;
+    align-items: flex-start;
     max-width: 164px;
+
 
 }
 .play__link {
-    padding: 13px 23px 13px 37px;
-    background-position: 0px;
+    padding: 13px 0px;
  }
  .image-mouse {
     display:none;

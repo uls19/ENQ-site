@@ -4,6 +4,15 @@ burgerEl.addEventListener("click", function () {
   menuEl.classList.toggle('lang_show');
 });
 
+const burgerPl = document.querySelector('.burger');
+const burgerOl = document.querySelector('.line__out');
+const menuNav = document.querySelector('.nav');
+burgerPl.addEventListener("click", function() {
+menuNav.classList.toggle('nav__show')
+});
+burgerOl.addEventListener("click", function() {
+menuNav.classList.toggle('nav__show');
+});
 
 var minOffset = 50;
 window.onscroll = function() { 

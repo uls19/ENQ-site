@@ -1542,8 +1542,14 @@ a,
     padding-right: calc(50% - 350px);
   }
   .hovers__header {
+    position: absolute;
     padding-left: calc(50% - 350px);
     padding-right: calc(50% - 350px);
+  }
+  .is_scrolled .hovers__header {
+    background: none;
+    -webkit-backdrop-filter: blur(17.5px);
+    backdrop-filter: noe;
   }
   .burger {
     padding: 16px;

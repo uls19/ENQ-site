@@ -1,0 +1,87 @@
+.main-box {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: $dark; 
+
+}
+
+.numblock {
+    
+    display: flex;
+    height: 176px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mediaTabletMob {
+        height: 128px;
+       
+    }
+
+    @include mediaMobile {
+        height: 496px;
+        flex-direction: column;
+        padding-bottom: 50px;  
+    }
+
+&__box {
+    text-align: center;
+    
+}
+
+&__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+
+    @include mediaTablet {
+        font-size: 14px;  
+    }
+
+    @include mediaTabletMob {
+        font-size: 12px;  
+    }
+
+    @include mediaMobile {
+        font-size: 15px;  
+    }
+
+}
+
+&__quantity {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: normal;
+    color: $white;
+    width: 172px;
+
+    @include mediaDesktopTab {
+        font-size: 36px;  
+    }
+
+    @include mediaTablet {
+        font-size: 24px;
+        width: 150px; 
+    }
+
+    @include mediaTabletMob {
+        font-size: 20px; 
+        width: auto;
+       
+    }
+
+    &_last {
+        @include mediaTabletMob {
+            width: 78px;
+        } 
+    }
+
+    @include mediaMobile {
+        font-size: 32px; 
+        width: auto;
+    } 
+}
+
+}

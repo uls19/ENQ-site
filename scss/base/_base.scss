@@ -1,0 +1,48 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&ampdisplay=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+    
+
+a,
+.button__news {
+    cursor: url(./../img/cursor_white.svg), pointer;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 22px;
+    padding-right: 22px;
+    
+
+
+    @include mediaDesktop {
+        width: 1248px;
+    }
+
+    @include mediaDesktopTab {
+        width: 984px;
+    }
+
+    @include mediaTablet {
+        width: 744px;
+    }
+
+    @include mediaTabletMob {
+        width: 464px;
+    }
+
+    @include mediaMobile {
+        width:320px;
+    }
+
+    @include mediaMin {
+        width: 299px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

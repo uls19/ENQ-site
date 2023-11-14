@@ -1,0 +1,145 @@
+.title {
+    overflow: hidden;
+   
+    &__header {
+        
+        max-width: 721px;
+        padding-top: 200px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 72px;
+        font-size: 48px;
+        color: #FFFFFF;
+
+        &_color {
+            color: $blue;
+        }
+
+        @include mediaDesktopTab {
+            max-width: 504px;
+            padding-top: 142px;
+            font-size: 32px;
+            line-height: normal;
+        }
+
+        @include mediaTabletMob {
+            max-width: 400px;
+            font-size: 27px;  
+        }
+
+        @include mediaMobile {
+            max-width: 274px;
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        padding-top: 36px;
+        padding-bottom: 100px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #817A92;
+
+        @include mediaDesktopTab {
+            padding-top: 22px;
+            padding-bottom: 32px;
+        }
+
+        @include mediaMobile {
+            padding-bottom: 75px; 
+        }
+
+    }
+
+    &__started {
+        display: flex;
+        gap: 14px;
+        max-width: 430px;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    &__started-button {
+        font-family: 'Source Sans Pro';
+        padding: 13px 42px;
+        display: block;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        color: #FFFFFF;
+        border-radius: 2px;
+        background-color: $blue;
+        transition: background-color 0.3s ease;
+    }
+
+    &__started-button:hover {
+        background-color: $light-blue;
+    }
+
+    &__play-link {
+        font-family: 'Source Sans Pro';
+        padding: 13px 23px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        color: $blue;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        @include mediaMobile {
+            padding: 13px 0;  
+        }
+    }
+
+    &__started-svg {
+        margin-right: 10px;
+        vertical-align: middle;
+        fill: $blue;
+        transition: fill 0.3s ease;
+    }
+
+    &__play-link:hover {
+        color: $light-blue;
+    }
+
+    &__play-link:hover &__started-svg {
+        fill: $light-blue;
+    }
+
+    &__image-mouse {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__mouse-link {
+        margin: 0 auto;
+        width: 50px;
+        display: block;
+
+        @include mediaDesktopTab {
+            margin: 70px auto 0;
+        }
+
+        @include mediaMobile {
+            display: none;
+        }
+
+    }
+
+    &__mouse-link:hover &__button-mouse {
+        fill: #272727;
+    }
+
+    &__button-sign {
+        height: 16px;
+    }
+}

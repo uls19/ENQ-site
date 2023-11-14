@@ -1,0 +1,74 @@
+.lang-select {
+    width: 100px;
+    padding: 10px 17px 5px;
+    text-align: start;
+    
+     @include mediaTablet {
+        margin-left: 12px;
+     }
+
+    &__link {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 66px;
+        color: $white;
+        white-space: nowrap;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @include mediaTablet {
+           color:$black;
+         }
+    }
+
+    &__active {
+        padding-right: 20px;
+        background-image: url(./../img/Icon1.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        text-decoration: underline !important;
+
+        @include mediaTablet {
+            background-image: url(./../img/icon1_black.svg);
+          }
+    }
+
+    &__img-flag {
+        padding-right: 5px;
+    }
+
+    &__img-select {
+        padding-left: 10px;
+        padding-top: 8px;
+    }
+
+}
+
+.lang-show {
+    display: none;
+}
+
+.lang-select:hover .lang-show {
+    display: block;
+}
+
+.lang-select:hover {
+    background-color: $white;
+    transition: background 0.5s ease;
+}
+
+.lang-select:hover .lang-select__active {
+    background-image: url(./../img/Icon2.svg);
+}
+
+.lang-select:hover .lang-select__link {
+    color: $black;
+}
+
+.lang-select:hover .lang-select__link:hover {
+    cursor: url(./../img/cursor_black.svg), pointer;
+    color: $blue;
+}

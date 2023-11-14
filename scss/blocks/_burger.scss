@@ -1,0 +1,21 @@
+.burger {
+    display: none;
+    padding: 16px 0 16px 16px;
+    gap: 4px;
+    flex-direction: column;
+    justify-content: center;
+     
+    @include mediaTablet {
+        display: flex;   
+    }
+
+&__line {
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #f4f6f7;
+}
+}
+.burger:hover {
+    cursor: url(./../img/cursor_white.svg), pointer;
+}

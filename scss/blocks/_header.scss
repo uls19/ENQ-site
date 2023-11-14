@@ -1,0 +1,170 @@
+.is_scrolled .header__top-box {
+    background: rgba(16, 20, 37, 0.85);
+    backdrop-filter: blur(17.5px);
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 718px;
+    // background: linear-gradient(0deg, #101425 0%, rgba(0, 0, 0, 0.00) 142.41%), url(./../img/iPhone14Pro.jpg), lightgray 50% / cover no-repeat;
+    background-image: url(./../img/iPhone14Pro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    @include mediaDesktopTab {
+        height: 568px;
+        background-size: auto 568px;
+    }
+
+    &__top-box {
+        position: fixed;
+        display: flex;
+        max-width: 1920px;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+    }
+
+    &__menu-box {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 14px;
+    }
+
+    &__logo-image {
+        width: 126px;
+
+        @include mediaDesktopTab {
+            width: 96px;
+            padding-top: 7px;
+
+        }
+    }
+
+    &__nav {
+
+        @include mediaTablet {
+            position: absolute;
+            top: 0;
+            right: -320px;
+        }
+        transition: right 1s ease;
+        
+    }
+
+    .menu_show {
+        right: 0;
+    }
+
+    &__menu {
+        display: flex;
+        column-gap: 56px;
+
+        @include mediaDesktopTab {
+            gap: 46px;
+        }
+
+        @include mediaTablet {
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 56px;
+                height: 100%;
+                z-index: 1;
+                top: 0px;
+                right: 0px;
+                background: rgba(0, 0, 0, 0.82);
+                ;
+            }
+
+            flex-direction: column;
+            height: 614px;
+            width: 320px;
+            padding-top: 164px;
+            row-gap: 3px;
+            background-color: $white;
+            background-image: url(./../img/Groupup.png);
+            background-repeat: no-repeat;
+            background-position: top 52px left 27px;
+        }
+    }
+
+    &__menu-list {
+        padding-left: 8px;
+        padding-top: 13px;
+        text-align: center;
+
+        @include mediaDesktopTab {
+            padding-left: 0;
+            
+        }
+
+        @include mediaTablet {
+            padding-left: 27px;
+            text-align: start;
+        }
+
+    }
+
+    &__menu-link {
+        color: $white;
+        padding: 12px 0;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: color 0.3s ease;
+
+        // &_active {
+        //     font-weight: 600;
+
+        //     @include mediaTablet {
+        //         font-weight: 400;
+        //     }
+        // }
+
+        @include mediaTablet {
+            color: $black;
+        }
+    }
+
+    &__menu-link:hover {
+        color: $blue;
+
+        @include mediaTablet {
+            cursor: url(./../img/cursor_black.svg), pointer;
+        }
+    }
+
+    &__menu-out {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 56px;
+        padding: 14px;
+        z-index: 2;
+
+        @include mediaTablet {
+            display: block;
+        }
+    }
+    &__menu-out:hover {
+        cursor: url(./../img/cursor_white.svg), pointer;
+}
+}
+
+
+
+
+
+.header__bottom-box {
+    height: 2000px;
+    // background-color: grey;
+}

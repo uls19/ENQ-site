@@ -1,0 +1,242 @@
+main {
+    overflow: hidden;
+}
+.blocknet {
+
+    display: grid;
+    column-gap: 56px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 190px repeat(5, 440px);
+    align-items: center;
+    grid-template-areas:
+        "header header"
+        "mobile mobile_jpg"
+        "friendly_jpg friendly"
+        "decentralized decentralized_jpg"
+        "borderless_jpg borderless"
+        "scalable scalable_jpg";
+
+
+    @include mediaDesktop {
+        column-gap: 47px;
+    }
+
+    @include mediaDesktopTab {
+        grid-template-rows: 152px repeat(5, 440px);
+        column-gap: 0;
+
+    }
+
+    @include mediaTablet {
+        grid-template-columns: 296px 1fr 296px;
+        grid-template-rows: 122px repeat(5, 326px);
+        column-gap: 24px;
+        row-gap: 40px;
+        grid-template-areas:
+            "header header header"
+            "mobile mobile mobile_jpg"
+            "friendly_jpg friendly friendly"
+            "decentralized decentralized decentralized_jpg"
+            "borderless_jpg borderless borderless"
+            "scalable scalable scalable_jpg";
+    }
+
+    @include mediaTabletMob {
+        grid-template-columns: 1fr;
+        grid-template-rows: 88px 280px auto 280px auto 280px auto 280px auto 280px auto;
+        row-gap: 16px;
+        grid-template-areas:
+            "header" "mobile_jpg" "mobile" "friendly_jpg" "friendly"
+            "decentralized_jpg" "decentralized" "borderless_jpg"
+            "borderless" "scalable_jpg" "scalable";
+    }
+
+    &__header {
+        grid-area: header;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: normal;
+        text-align: center;
+        color: $header;
+
+        &_color {
+            color: $blue;
+        }
+
+        @include mediaDesktopTab {
+            font-size: 32px;
+           
+        }
+        @include mediaTablet {
+            padding-top: 36px;
+        }
+
+        @include mediaTabletMob {
+            font-size: 24px;
+            padding-top: 0px;
+                
+        }
+
+        @include mediaMobileMax {
+            font-size: 20px;
+            
+        }
+    }
+
+    &__box {
+        max-width: 669px;
+        height: 440px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include mediaTablet {
+
+            height: 326px;
+        }
+
+        @include mediaTabletMob {
+            height: 280px;
+        }
+
+
+    }
+
+    &__box-mobile {
+        background-image: url(./../img/mobile.jpg);
+        grid-area: mobile_jpg;
+    }
+
+    &__mobile-item {
+        grid-area: mobile;
+
+        @include mediaDesktopTab {
+            padding-right: 30px;
+        }
+
+        @include mediaTablet {
+            padding-right: 0px;
+        }
+    }
+
+    &__title {
+        padding-bottom: 20px;
+        color: $header;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include mediaDesktopTab {
+            padding-bottom: 25px;
+            font-size: 32px;
+        }
+
+        @include mediaTablet {
+            padding-bottom: 0px;
+            font-size: 28px;
+        }
+
+        @include mediaTabletMob {
+            padding-bottom: 16px;
+            font-size: 20px;
+        }
+
+    }
+
+    &__text {
+        padding-bottom: 24px;
+        max-width: 590px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $dark;
+
+        @include mediaTablet {
+            font-size: 15px;
+        }
+
+        @include mediaTabletMob {
+            font-size: 14px;
+        }
+    }
+
+    &__box-friendly {
+        background-image: url(./../img/friendly.jpg);
+        grid-area: friendly_jpg;
+    }
+
+    &__friendly-item {
+        grid-area: friendly;
+
+        @include mediaDesktopTab {
+            padding-left: 30px;
+        }
+
+        @include mediaTablet {
+            padding-left: 0px;
+        }
+    }
+
+    &__box-decentralized {
+        background-image: url(./../img/Decentralized.jpg);
+        grid-area: decentralized_jpg;
+    }
+
+    &__decentralized-item {
+        grid-area: decentralized;
+
+        @include mediaDesktopTab {
+            padding-right: 30px;
+        }
+            @include mediaTablet {
+                padding-right: 0px;
+            }  
+    }
+
+    &__box-borderless {
+        background-image: url(./../img/Borderless.jpg);
+        grid-area: borderless_jpg;
+    }
+
+    &__borderless-item {
+        grid-area: borderless;
+
+        @include mediaDesktopTab {
+            padding-left: 30px;
+        }
+
+        @include mediaTablet {
+            padding-left: 0px;
+        }
+    }
+
+    &__box-scalable {
+        background-image: url(./../img/Scalable.jpg);
+        grid-area: scalable_jpg;
+    }
+
+    &__scalable-item {
+        grid-area: scalable;
+
+        @include mediaDesktopTab {
+            padding-right: 30px;
+        }
+
+        @include mediaTablet {
+            padding-right: 0px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -119,7 +119,14 @@ a,
 }
 @media screen and (max-width: 744px) {
   .container {
+    width: 576px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .container {
     width: 464px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (max-width: 464px) {
@@ -517,7 +524,7 @@ a,
   cursor: url(./../img/cursor_white.svg), pointer;
 }
 
-.main-box {
+.num-box {
   max-width: 1920px;
   margin: 0 auto;
   background: #101425;
@@ -600,5 +607,226 @@ a,
   .numblock__quantity {
     font-size: 32px;
     width: auto;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+.blocknet {
+  display: grid;
+  column-gap: 56px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 190px repeat(5, 440px);
+  align-items: center;
+  grid-template-areas: "header header" "mobile mobile_jpg" "friendly_jpg friendly" "decentralized decentralized_jpg" "borderless_jpg borderless" "scalable scalable_jpg";
+}
+@media screen and (max-width: 1440px) {
+  .blocknet {
+    column-gap: 47px;
+  }
+}
+@media screen and (max-width: 1248px) {
+  .blocknet {
+    grid-template-rows: 152px repeat(5, 440px);
+    column-gap: 0;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet {
+    grid-template-columns: 296px 1fr 296px;
+    grid-template-rows: 122px repeat(5, 326px);
+    column-gap: 24px;
+    row-gap: 40px;
+    grid-template-areas: "header header header" "mobile mobile mobile_jpg" "friendly_jpg friendly friendly" "decentralized decentralized decentralized_jpg" "borderless_jpg borderless borderless" "scalable scalable scalable_jpg";
+  }
+}
+@media screen and (max-width: 744px) {
+  .blocknet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 88px 280px auto 280px auto 280px auto 280px auto 280px auto;
+    row-gap: 16px;
+    grid-template-areas: "header" "mobile_jpg" "mobile" "friendly_jpg" "friendly" "decentralized_jpg" "decentralized" "borderless_jpg" "borderless" "scalable_jpg" "scalable";
+  }
+}
+.blocknet__header {
+  grid-area: header;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: normal;
+  text-align: center;
+  color: #282828;
+}
+.blocknet__header_color {
+  color: #00A7D2;
+}
+@media screen and (max-width: 1248px) {
+  .blocknet__header {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet__header {
+    padding-top: 36px;
+  }
+}
+@media screen and (max-width: 744px) {
+  .blocknet__header {
+    font-size: 24px;
+    padding-top: 0px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .blocknet__header {
+    font-size: 20px;
+  }
+}
+.blocknet__box {
+  max-width: 669px;
+  height: 440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 984px) {
+  .blocknet__box {
+    height: 326px;
+  }
+}
+@media screen and (max-width: 744px) {
+  .blocknet__box {
+    height: 280px;
+  }
+}
+.blocknet__box-mobile {
+  background-image: url(./../img/mobile.jpg);
+  grid-area: mobile_jpg;
+}
+.blocknet__mobile-item {
+  grid-area: mobile;
+}
+@media screen and (max-width: 1248px) {
+  .blocknet__mobile-item {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet__mobile-item {
+    padding-right: 0px;
+  }
+}
+.blocknet__title {
+  padding-bottom: 20px;
+  color: #282828;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+@media screen and (max-width: 1248px) {
+  .blocknet__title {
+    padding-bottom: 25px;
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet__title {
+    padding-bottom: 0px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 744px) {
+  .blocknet__title {
+    padding-bottom: 16px;
+    font-size: 20px;
+  }
+}
+.blocknet__text {
+  padding-bottom: 24px;
+  max-width: 590px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #101425;
+}
+@media screen and (max-width: 984px) {
+  .blocknet__text {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 744px) {
+  .blocknet__text {
+    font-size: 14px;
+  }
+}
+.blocknet__box-friendly {
+  background-image: url(./../img/friendly.jpg);
+  grid-area: friendly_jpg;
+}
+.blocknet__friendly-item {
+  grid-area: friendly;
+}
+@media screen and (max-width: 1248px) {
+  .blocknet__friendly-item {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet__friendly-item {
+    padding-left: 0px;
+  }
+}
+.blocknet__box-decentralized {
+  background-image: url(./../img/Decentralized.jpg);
+  grid-area: decentralized_jpg;
+}
+.blocknet__decentralized-item {
+  grid-area: decentralized;
+}
+@media screen and (max-width: 1248px) {
+  .blocknet__decentralized-item {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet__decentralized-item {
+    padding-right: 0px;
+  }
+}
+.blocknet__box-borderless {
+  background-image: url(./../img/Borderless.jpg);
+  grid-area: borderless_jpg;
+}
+.blocknet__borderless-item {
+  grid-area: borderless;
+}
+@media screen and (max-width: 1248px) {
+  .blocknet__borderless-item {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet__borderless-item {
+    padding-left: 0px;
+  }
+}
+.blocknet__box-scalable {
+  background-image: url(./../img/Scalable.jpg);
+  grid-area: scalable_jpg;
+}
+.blocknet__scalable-item {
+  grid-area: scalable;
+}
+@media screen and (max-width: 1248px) {
+  .blocknet__scalable-item {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .blocknet__scalable-item {
+    padding-right: 0px;
   }
 }/*# sourceMappingURL=main.css.map */

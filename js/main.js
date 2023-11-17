@@ -1,5 +1,5 @@
-
 window.onload = function () {
+  
 const minOffset = 50;
 window.onscroll = function() { 
   let has_class = document.body.classList.contains("is_scrolled");
@@ -95,4 +95,53 @@ burgerOut.addEventListener("click", function() {
   }
 
   outNum4(129774);
+
+const mailEl = document.querySelector('.news__mail');
+let reg = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;//форма валидации e-mail
+let span = document.querySelector('.news__error');
+
+mailEl.addEventListener('click', function () { 
+  mailEl.style.backgroundColor = "#343434", 
+  mailEl.style.border = "1px solid #00A7D2",
+  mailEl.classList.remove('is-invalid'),// удаляем класс неудачной валидации 
+  span.textContent= '';
+});
+
+document.addEventListener( 'click', (e) => {
+	const withinBoundaries = e.composedPath().includes(mailEl);
+ 
+	if ( ! withinBoundaries ) {
+		mailEl.style.backgroundColor = 'rgba(255, 255, 255, 0.19)',
+    mailEl.style.border = 'none';// скрываем элемент т к клик был за его пределами
+  }
+});
+
+document.querySelector('.news__button').onclick = function(e){
+  e.preventDefault();
+
+  if (!validate(reg, mailEl.value)) {
+   notValid(mailEl, span, 'Error message');
+  }else{
+    valid(mailEl, span,'');
+  }
+};
+
+function validate(regex, mailEl){
+  return regex.test(mailEl);
 }
+
+function notValid(mailEl, el, mess){
+  mailEl.classList.add('is-invalid');
+  el.innerHTML = mess;
+}
+
+function valid(mailEl, el, mess){
+  mailEl.classList.remove('is-invalid');
+  mailEl.classList.add('is-valid');
+  el.innerHTML = mess;
+}
+
+
+
+}
+

@@ -78,7 +78,7 @@ main {
                 
         }
 
-        @include mediaMobileMax {
+        @include mediaMobile {
             font-size: 20px;
             
         }
@@ -229,7 +229,123 @@ main {
             padding-right: 0px;
         }
     }
+
 }
+
+.network {
+    margin-top: 122px;
+    padding-bottom: 100px;
+    background-image: url(./../img/Group4.png);
+    background-size: 357px 354px;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    padding-left: 444px;
+
+    @include mediaDesktop { 
+        padding-left: 404px;
+    }
+
+    @include mediaDesktopTab {
+        padding-bottom: 78px;
+        margin-top: 62px; 
+        padding-left: 313px; 
+        background-size: 286px 284px;
+    }
+
+    @include mediaTablet {
+        padding-bottom: 64px;
+        padding-left: 136px;
+        background-size: 357px 354px;
+        background-position: left -230px top;
+    }
+    @include mediaTabletMob {
+        padding-bottom: 57px;
+        padding-top: 0px;
+        margin-top: 55px; 
+        padding-left: 130px; 
+        background-position: left -246px top;
+    }
+    @include mediaMobileMax {
+        padding-top: 380px;
+        padding-bottom: 50px;
+        background-position:  top; 
+        padding-left: 16px; 
+        padding-right: 16px;
+    }
+    @include mediaMobile {
+        margin-top: 40px;
+        padding-top: 273px;
+        background-size: 239px 236px;
+        
+    }
+
+    &__header {
+        text-align: left;
+
+        @include mediaTablet {
+            padding-top: 0px;
+
+        }
+
+    }
+
+&__wrapper {
+    max-width: 800px;
+    margin-top: 16px;
+}
+
+&__line {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    margin-right: 10px;
+    border-radius: 2px;
+    border: 1px solid $black;
+}
+
+&__text {
+    display: inline;
+    font-size: 14px;
+    line-height: 173.02%;
+    color: $header;
+
+    &_color {
+        color:$blue;
+    }
+}
+
+&__button {
+    margin-top: 70px;
+
+    @include mediaDesktopTab {
+        margin-top: 56px; 
+    }
+}
+
+&__button-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    border-radius: 2px;
+    padding: 13px 20px;
+    text-decoration: none;
+    background: $blue;
+    color: #FFFFFF;
+    transition: background 0.3s ease ;
+
+
+}
+
+&__button-link:hover {
+    background: $light-blue;
+
+}
+
+}
+
+
 
 
 

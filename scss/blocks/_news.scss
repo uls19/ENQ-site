@@ -35,6 +35,7 @@
 
     &__image {
         width: 109px;
+        opacity: 0.3;
 
         @include mediaTablet {
             width: 51px;

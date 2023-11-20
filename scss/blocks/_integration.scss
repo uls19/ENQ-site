@@ -1,0 +1,194 @@
+.integration {
+    max-width: 1248px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 46px;
+    padding-bottom: 40px;
+    grid-template-areas: "hd hd hd" "cx st df";
+
+    @include mediaDesktop {
+        max-width: none;
+
+    }
+
+    @include mediaDesktopTab {
+        column-gap: 24px;
+    }
+
+    @include mediaTablet {
+        padding-bottom: 34px;
+    }
+
+    @include mediaTabletMob {
+        column-gap: 18px;
+        padding-bottom: 32px;
+    }
+
+    @include mediaMobileMax {
+        grid-template-columns: 1fr;
+        grid-template-areas: "hd" "cx" "st" "df";
+        row-gap: 24px;
+        justify-items: center;
+    }
+
+    &__header {
+        padding-top: 25px;
+        padding-bottom: 40px;
+        grid-area: hd;
+
+        &_color {
+            color: $blue;
+        }
+
+        @include mediaDesktopTab {
+            padding-top: 0px;
+            padding-bottom: 40px;
+        }
+
+        @include mediaTablet {
+            padding-bottom: 36px;
+        }
+
+        @include mediaTabletMob {
+            padding-bottom: 48px;
+        }
+
+        @include mediaMobileMax {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__box {
+        padding-left: 40px;
+        padding-bottom: 38px;
+        width: 370px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 15px 19px rgba(0, 0, 0, 0.03);
+        border-radius: 2px;
+
+        @include mediaDesktopTab {
+            padding-left: 25px;
+            width: 297px;
+            padding-bottom: 34px;
+        }
+
+        @include mediaTablet {
+            padding-left: 16px;
+            width: 216px;
+            padding-bottom: 24px;
+        }
+
+        @include mediaTabletMob {
+            width: 164px;
+            padding-bottom: 16px;
+        }
+
+        @include mediaMobileMax {
+            width: 327px;
+            padding-bottom: 24px;
+            padding-left: 25px;
+        }
+
+        @include mediaMobile {
+            width: 288px;
+        }
+
+        @include mediaMin {
+            width: 270px;
+        }
+    }
+
+    &__cex {
+        grid-area: cx;
+        background: url(./../img/back_cex1.svg) bottom left no-repeat,
+            url(./../img/back_cex.svg) top right no-repeat;
+    }
+
+    &__heading {
+        padding-top: 52px;
+        padding-bottom: 98px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 114.5%;
+        color: $dark;
+
+        @include mediaDesktopTab {
+            padding-top: 22px;
+            padding-bottom: 67px;
+        }
+
+        @include mediaTablet {
+            padding-top: 16px;
+            padding-bottom: 30px;
+            font-size: 20px;
+        }
+
+        @include mediaTabletMob {
+            padding-bottom: 38px;
+            font-size: 16px;
+        }
+
+        @include mediaMobileMax {
+            padding-top: 22px;
+            width: 300px;
+            font-size: 18px;
+            padding-bottom: 73px;
+        }
+    }
+
+    &__frame {
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+
+        @include mediaDesktopTab {
+            row-gap: 20px;
+        }
+
+        @include mediaMobileMax {
+            row-gap: 27px;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        color: #000000;
+
+        @include mediaTablet {
+            font-size: 16px;
+        }
+    }
+
+    &__link:hover {
+        cursor: url(./../img/cursor_black.svg), pointer;
+        text-decoration: underline;
+    }
+
+    &__img {
+        width: 32px;
+        vertical-align: middle;
+        margin-right: 12px;
+
+        @include mediaTablet {
+            width: 28px;
+        }
+
+        @include mediaMobileMax {
+            width: 32px;
+        }
+    }
+
+    &__staking {
+        grid-area: st;
+        background: url(./../img/line.svg) center no-repeat;
+    }
+
+    &__defi {
+        grid-area: df;
+        background: url(./../img/test.svg) center no-repeat;
+    }
+
+}

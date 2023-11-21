@@ -63,8 +63,9 @@
         padding-bottom: 38px;
         width: 370px;
         border: 1px solid rgba(0, 0, 0, 0.08);
-        box-shadow: 0px 15px 19px rgba(0, 0, 0, 0.03);
+        cursor: url(./../img/cursor_black.svg), pointer;
         border-radius: 2px;
+        transition: transform 0.2s ease-in-out;
 
         @include mediaDesktopTab {
             padding-left: 25px;
@@ -97,6 +98,12 @@
             width: 270px;
         }
     }
+
+    &__box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 15px 19px rgba(0, 0, 0, 0.03);
+    }
+
 
     &__cex {
         grid-area: cx;
@@ -150,6 +157,7 @@
             row-gap: 27px;
         }
     }
+
     &__link {
         text-decoration: none;
         font-style: normal;
@@ -164,7 +172,6 @@
 
     &__link:hover {
         cursor: url(./../img/cursor_black.svg), pointer;
-        text-decoration: underline;
     }
 
     &__img {

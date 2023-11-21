@@ -316,6 +316,8 @@ main {
 
 &__button {
     margin-top: 70px;
+    width: 262px;
+    text-align: center;
 
     @include mediaDesktopTab {
         margin-top: 56px; 
@@ -323,6 +325,7 @@ main {
 }
 
 &__button-link {
+    display: block;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
@@ -331,14 +334,16 @@ main {
     border-radius: 2px;
     padding: 13px 20px;
     text-decoration: none;
+    cursor: url(./../img/cursor_black.svg), pointer;
     background: $blue;
     color: #FFFFFF;
-    transition: background 0.3s ease ;
+    transition: all 0.2s ease-in-out ;
 
 
 }
 
 &__button-link:hover {
+    transform: translateY(-3px);
     background: $light-blue;
 
 }

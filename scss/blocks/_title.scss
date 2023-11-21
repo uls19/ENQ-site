@@ -74,10 +74,11 @@
         color: #FFFFFF;
         border-radius: 2px;
         background-color: $blue;
-        transition: background-color 0.3s ease;
+        transition: all 0.2s ease-in-out;
     }
 
     &__started-button:hover {
+        transform: translateY(-3px);
         background-color: $light-blue;
     }
 
@@ -91,7 +92,7 @@
         letter-spacing: -0.41px;
         color: $blue;
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: all 0.2s ease-in-out;
 
         @include mediaMobile {
             padding: 13px 0;  
@@ -102,10 +103,11 @@
         margin-right: 10px;
         vertical-align: middle;
         fill: $blue;
-        transition: fill 0.3s ease;
+        transition: fill 0.2s ease;
     }
 
     &__play-link:hover {
+        transform: translateY(-3px);
         color: $light-blue;
     }
 
@@ -124,6 +126,7 @@
         margin: 0 auto;
         width: 50px;
         display: block;
+       
 
         @include mediaDesktopTab {
             margin: 70px auto 0;
@@ -134,9 +137,13 @@
         }
 
     }
+    &__button-mouse {
+        transition: all 0.2s ease-in-out;
+    }
 
     &__mouse-link:hover &__button-mouse {
         fill: #272727;
+        box-shadow: 0 4px 11px rgba(55, 125, 255, 0.35);
     }
 
     &__button-sign {

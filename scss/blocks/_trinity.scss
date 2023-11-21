@@ -1,0 +1,268 @@
+.trinity {
+    display: grid;
+    grid-template-columns: 539px 1fr;
+    column-gap: 65px;
+    padding-top: 48px;
+    padding-bottom: 101px;
+
+    @include mediaDesktop {
+        grid-template-columns: 458px 1fr;
+        column-gap: 40px;
+        padding-top: 96px; 
+        padding-bottom: 96px;
+    }
+
+    @include mediaDesktopTab {
+        grid-template-columns: 373px 1fr; 
+        column-gap: 26px;
+        padding-top: 46px; 
+        padding-bottom: 60px;
+    }
+
+    @include mediaTablet {
+        grid-template-columns: 233px 1fr;  
+        padding-top: 40px; 
+        padding-bottom: 94px;
+    }
+
+    @include mediaTabletMob {
+        grid-template-columns: 140px 1fr; 
+        column-gap: 0px;
+        padding-bottom: 33px;     
+    } 
+
+    @include mediaMobileMax {
+        grid-template-columns: 1fr;
+        padding-top: 0px;   
+    }
+
+    @include mediaMobile {
+        padding-bottom: 64px; 
+    }
+
+    &__left-box {
+        position: relative;
+        min-height: 386px;
+        background-image: url(./../img/TechPaper.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+
+        @include mediaDesktop {
+            min-height: 328px;
+            background-size: 458px;
+        }
+        @include mediaDesktopTab  {
+            min-height: 267px;
+            background-size: 373px; 
+        }
+        @include mediaTablet {
+            min-height: 167px;
+            background-size: 233px; 
+        }
+        @include mediaTabletMob {
+            background-size: 255px;
+            background-position: left -100px top; 
+        } 
+        @include mediaMobileMax {
+            background-size: 341px;
+            min-height: 244px;
+            background-position: top center; 
+        }
+        @include mediaMobile {
+            background-size: 300px;  
+        }
+    }
+
+    &__down-btn {
+        display: flex;
+        position: absolute;
+        right: 42px;
+        top: 328px;
+        width: 66px;
+
+        @include mediaDesktop {
+            right: 72px; 
+            top: 272px;
+        }
+        @include mediaDesktopTab {
+            right: 54px; 
+            top: 221px;
+        }
+        @include mediaTablet {
+            right: 20px; 
+            top: 158px;
+        }
+        @include mediaTabletMob {
+            right: 16px;
+            top: 145px; 
+        }
+        @include mediaMobileMax {
+            right: 40px;
+        }
+        @include mediaMobile {
+            top: 170px; 
+        }
+    }
+
+    &__down-link {
+        color: $blue;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline !important;
+        cursor: url(./../img/cursor_black.svg), pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__down-link:hover {
+        transform: translateY(-3px);
+        color: $light-blue;
+    }
+
+    &__down-svg {
+        fill: $blue;
+        transition: fill 0.2s ease-in-out;
+    }
+
+    &__down-link:hover &__down-svg {
+        fill: $light-blue;
+    }
+
+    &__right-box {
+        background-image: url(./../img/trinity-network.svg);
+        background-repeat: no-repeat;
+        background-position: right 156px top 100px;
+
+        @include mediaDesktop {
+            background-position: right 56px top 56px;
+        }
+        @include mediaDesktopTab {
+            background-position: right 30px top 36px ;
+        }
+        @include mediaTablet {
+            background-size: 138px;    
+        }
+        @include mediaTabletMob {
+            background-size: 112px;
+            background-position: right 76px top 20px ;
+        }
+        @include mediaMobileMax {
+            background-position: right 30px top 76px ;
+            padding-top: 40px;
+        }
+        @include mediaMobile {
+            background-position: right -30px top 76px ; 
+        }
+    }
+
+    &__header {
+        padding-top: 48px;
+        text-align: left;
+        padding-bottom: 56px;
+
+        &_color {
+            // color: #EA0054;
+            background: linear-gradient(270deg, #9E2B48 0.03%, #EEA2D0 25.21%, #CA3A5D 49.86%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @include mediaDesktop {
+            padding-top: 0px;
+            padding-bottom: 46px;
+        }
+        @include mediaDesktopTab {
+            padding-top: 26px;
+            padding-bottom: 100px;
+        }
+        @include mediaTablet {
+            padding-top: 0px;
+            padding-bottom: 31px;
+        }
+        @include mediaTabletMob {
+            padding-bottom: 43px;  
+        }
+        @include mediaMobileMax {
+            text-align: center;
+        }
+        @include mediaMobile {
+            padding-bottom: 36px;
+        }
+    }
+
+    &__right-buttons-box {
+        display: flex;
+        max-width: 460px;
+        gap: 14px;
+        white-space: nowrap;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include mediaTablet {
+            gap: 10px;
+        }
+        @include mediaMobileMax {
+            justify-content:center; 
+        }
+        @include mediaMobile {
+            row-gap: 14px;
+            justify-content:center;  
+        }
+    }
+
+
+    &__right-button {
+        width: 224px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        text-align: center;
+        border-radius: 2px;
+        background-color: $blue;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        text-decoration: none;
+        display: block;
+        color: $white;
+        cursor: url(./../img/cursor_black.svg), pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__right-button:hover {
+        transform: translateY(-3px);
+        background-color: $light-blue;
+    }
+
+    &__right-link {
+        padding: 10px 0; 
+        color: $blue;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: url(./../img/cursor_black.svg), pointer;
+        line-height: normal;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__right-link:hover {
+        transform: translateY(-3px);
+        color: $light-blue; 
+    }
+
+    &__right-svg {
+        vertical-align: middle;
+        margin-left: 5px;
+        fill: $blue;
+        padding-bottom: 5px;
+        transition: fill 0.2s ease;
+    }
+
+    &__right-link:hover &__right-svg{
+        fill: $light-blue;
+    }
+
+}

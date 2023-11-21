@@ -16,19 +16,19 @@
         grid-template-columns: 373px 1fr; 
         column-gap: 26px;
         padding-top: 46px; 
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
 
     @include mediaTablet {
         grid-template-columns: 233px 1fr;  
         padding-top: 40px; 
-        padding-bottom: 94px;
+        padding-bottom: 86px;
     }
 
     @include mediaTabletMob {
         grid-template-columns: 140px 1fr; 
         column-gap: 0px;
-        padding-bottom: 33px;     
+        padding-bottom: 40px;     
     } 
 
     @include mediaMobileMax {

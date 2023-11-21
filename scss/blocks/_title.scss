@@ -92,7 +92,8 @@
         letter-spacing: -0.41px;
         color: $blue;
         text-decoration: none;
-        transition: all 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out,
+        color 0.2s ease-in-out;
 
         @include mediaMobile {
             padding: 13px 0;  

@@ -1,0 +1,124 @@
+.projects {
+
+&__header {
+    text-align: center;
+    padding-top: 26px;
+    padding-bottom: 58px;
+}
+
+&__items {
+    display: grid;
+    padding-left: calc(50% - 1200px / 2);
+    padding-right: calc(50% - 1200px / 2);
+    grid-column-gap: 48px;
+    grid-row-gap: 38px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    // grid-template-areas:
+
+    @include mediaDesktopTab {
+        padding-left: 0;
+        padding-right: 0 ;
+        grid-column-gap: 24px;
+    }
+
+    @include mediaTablet {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-row-gap: 28px;
+
+    }
+    @include mediaTabletMob {
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+
+    @include mediaMobileMax {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+
+    }
+
+}
+
+
+&__item-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 19px;
+    color:$black;
+    background-repeat: no-repeat;
+    background-position: 28px;
+    padding-left: 88px;
+    padding-right: 28px;
+    height: 66px;
+    border: 1px solid #EEEEEE;
+    border-radius: 2px;
+    cursor: url(./../img/cursor_black.svg), pointer;
+    transition: transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+
+    @include mediaDesktopTab {
+        background-position: 14px center;
+        font-size: 18px;
+        padding-left: 64px;
+        padding-right: 14px;
+    }
+
+    @include mediaTabletMob {
+        background-position: 9px center;
+        background-size: 24px;
+        height: 48px;
+        padding-left: 44px;
+        padding-right: 9px;
+        font-size: 16px;
+
+    }
+}
+
+&__item-link:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.03);
+    transform: translateY(-3px);
+}
+
+&__item-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #71B0C0;
+    background: rgba(0, 167, 210, 0.08);
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+&__item1 {
+    background-image: url(./../img/space.png);
+
+}
+
+&__item2 {
+    background-image: url(./../img/artrax.png);
+}
+
+&__item3 {
+    background-image: url(./../img/buldog.png);
+}
+
+&__item4 {
+    background-image: url(./../img/pug.png);
+}
+
+&__item5 {
+    background-image: url(./../img/bgf.png);
+}
+
+&__item6 {
+    background-image: url(./../img/bant.png);
+}
+}

@@ -1,0 +1,290 @@
+.services {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 110px;
+    padding-bottom: 26px;
+
+    @include mediaDesktopTab {
+        padding-top: 100px;
+        padding-bottom: 70px;
+
+        @include mediaTablet {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    }
+
+    &__header {
+        font-style: normal;
+        font-weight: 500;
+        line-height: 133%;
+        text-align: center;
+        background: linear-gradient(90deg, #101425 0%, #00A7D2 100%), #FFFFFF;
+        // -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 35px;
+
+        @include mediaDesktopTab {
+            font-size: 36px;
+            padding-bottom: 49px;
+        }
+
+        @include mediaTablet {
+            padding-top: 73px;
+            padding-bottom: 54px;
+            font-size: 32px;
+        }
+
+        @include mediaTabletMob {
+            padding-top: 59px;
+            padding-bottom: 29px;
+            font-size: 24px;
+        }
+
+        @include mediaMobileMax {
+            max-width: 274px;
+            font-size: 20px;
+        }
+    }
+
+    &__button {
+        padding: 9px 20px;
+        background: $blue;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        color: #FFFFFF;
+        border-radius: 2px;
+        border-style: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__button:hover {
+        background: $light-blue;
+        transform: translateY(-3px);
+        cursor: url(./../img/cursor_black.svg), pointer;
+    }
+
+    &__token {
+        background-image: url(./../img/token.png);
+        background-repeat: no-repeat;
+        background-size: 400px 400px;
+        margin-top: 57px;
+        max-width: 1220px;
+        min-height: 400px;
+        padding-left: 440px;
+
+        @include mediaDesktop {
+            background-size: 326px 326px;
+            max-width: 1120px;
+            padding-left: 360px;
+            min-height: 326px;
+        }
+
+        @include mediaDesktopTab {
+            background-size: 229px 229px;
+            max-width: 920px;
+            min-height: 229px;
+            margin-top: 100px;
+            padding-left: 260px;
+        }
+
+        @include mediaTablet {
+            margin-top: 44px;
+            padding-left: 144px;
+            background-position-x: -110px;
+        }
+
+        @include mediaTabletMob {
+            max-width: 570px;
+            min-height: 284px;
+            margin-top: 33px;
+            padding-left: 118px;
+            background-size: 284px 284px;
+            background-position-x: -170px;
+
+        }
+
+        @include mediaMobileMax {
+            padding-left: 0px;
+            margin-top: 71px;
+            width: 464px;
+            background-position-y: top;
+            background-position-x: center;
+        }
+    }
+    &__token-content {
+        padding-top: 75px;
+
+        @include mediaDesktop {
+            padding-top: 37px;
+        }
+
+        @include mediaDesktopTab {
+            padding-top: 8px;
+        }
+
+        @include mediaMobileMax {
+            padding-top: 342px;
+        }
+    }
+
+    &__token-title {
+        color: $header;
+        text-align: left;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include mediaDesktopTab {
+            font-size: 36px;
+        }
+
+        @include mediaTablet {
+            font-size: 32px;
+        }
+
+        @include mediaTabletMob {
+            font-size: 24px;
+        }
+
+        @include mediaMobileMax {
+            text-align: center;
+        }
+    }
+
+    &__token-text {
+        display: flex;
+        gap: 70px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        flex-wrap: wrap;
+
+        @include mediaDesktopTab {
+            gap: 47px;
+        }
+
+        @include mediaTablet {
+            row-gap: 12px;
+            column-gap: 58px;
+        }
+
+        @include mediaTabletMob {
+            padding-top: 23px;
+            padding-bottom: 23px;
+        }
+
+        @include mediaMobileMax {
+            flex-direction: column;
+            text-align: center;
+            row-gap: 30px;
+        }
+    }
+
+    &__text {
+
+        &_little {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: rgba(16, 20, 37, 0.64);
+        }
+
+        &_bold {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $dark;  
+            
+            @include mediaMobileMax {
+                font-size: 18px;  
+            }
+        }  
+    }
+    
+    &__box-image {
+        height: 42px;
+        display: flex;
+        gap: 52px;
+
+        @include mediaTabletMob {
+            gap: 22px;
+        }
+
+        @include mediaMobileMax {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            gap: 40px;
+
+        }
+    }
+
+    &__item-image {
+        width: 140px;
+        height: 61px;
+
+
+        @include mediaDesktopTab {
+            width: 97px;
+            height: 42px;
+        }
+
+        @include mediaTablet {
+            width: 84px;
+            height: 36px;
+        }
+
+        @include mediaMobileMax {
+            width: 170px;
+            height: 74px;
+        }
+    }
+
+    &__item-image1 {
+        width: 210px;
+        height: 61px;
+
+        @include mediaDesktopTab {
+            width: 144px;
+            height: 42px;
+        }
+
+        @include mediaTablet {
+            width: 124px;
+            height: 36px;
+        }
+
+        @include mediaMobileMax {
+            width: 254px;
+            height: 74px;
+        }
+    }
+
+    &__item-image2 {
+        width: 97px;
+        height: 61px;
+
+        @include mediaDesktopTab {
+            width: 67px;
+            height: 42px;
+        }
+
+        @include mediaTablet {
+            width: 58px;
+            height: 36px;
+        }
+
+        @include mediaMobileMax {
+            width: 119px;
+            height: 74px;
+        }
+    }
+}

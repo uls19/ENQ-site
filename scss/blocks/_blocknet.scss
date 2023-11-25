@@ -51,38 +51,7 @@ main {
             "borderless" "scalable_jpg" "scalable";
     }
 
-    &__header {
-        grid-area: header;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 48px;
-        line-height: normal;
-        text-align: center;
-        color: $header;
-
-        &_color {
-            color: $blue;
-        }
-
-        @include mediaDesktopTab {
-            font-size: 32px;
-           
-        }
-        @include mediaTablet {
-            padding-top: 36px;
-        }
-
-        @include mediaTabletMob {
-            font-size: 24px;
-            padding-top: 0px;
-                
-        }
-
-        @include mediaMobile {
-            font-size: 20px;
-            
-        }
-    }
+   
 
     &__box {
         max-width: 669px;

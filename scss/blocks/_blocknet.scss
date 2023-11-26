@@ -1,6 +1,7 @@
 main {
     overflow: hidden;
 }
+
 .blocknet {
 
     display: grid;
@@ -51,7 +52,7 @@ main {
             "borderless" "scalable_jpg" "scalable";
     }
 
-   
+
 
     &__box {
         max-width: 669px;
@@ -160,9 +161,10 @@ main {
         @include mediaDesktopTab {
             padding-right: 30px;
         }
-            @include mediaTablet {
-                padding-right: 0px;
-            }  
+
+        @include mediaTablet {
+            padding-right: 0px;
+        }
     }
 
     &__box-borderless {
@@ -210,42 +212,61 @@ main {
     padding-top: 10px;
     padding-left: 444px;
 
-    @include mediaDesktop { 
+    @include mediaDesktop {
         padding-left: 404px;
     }
 
     @include mediaDesktopTab {
         padding-bottom: 78px;
-        margin-top: 62px; 
-        padding-left: 313px; 
+        margin-top: 62px;
+        padding-left: 313px;
         background-size: 286px 284px;
     }
 
     @include mediaTablet {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc(50% - 238px);
+        padding-right: calc(50% - 350px);
         padding-bottom: 64px;
-        padding-left: 136px;
         background-size: 357px 354px;
-        background-position: left -230px top;
+        background-position: calc(50% - 430px) 0;
+        width: 100%;
     }
+
     @include mediaTabletMob {
         padding-bottom: 57px;
+        padding-left: calc(50% - 170px);
+        padding-right: calc(50% - 270px);
         padding-top: 0px;
-        margin-top: 55px; 
-        padding-left: 130px; 
-        background-position: left -246px top;
+        margin-top: 55px;
+        background-position: calc(50% - 370px) 0;
     }
+
     @include mediaMobileMax {
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 380px;
         padding-bottom: 50px;
-        background-position:  top; 
-        padding-left: 16px; 
+        background-position: top;
+        padding-left: 16px;
         padding-right: 16px;
+        width: 464px;
     }
+
     @include mediaMobile {
+        width: 320px;
         margin-top: 40px;
         padding-top: 273px;
         background-size: 239px 236px;
-        
+
+    }
+
+    @include mediaMin {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 299px;
+
     }
 
     &__header {
@@ -258,75 +279,72 @@ main {
 
     }
 
-&__wrapper {
-    max-width: 800px;
-    margin-top: 16px;
-}
-
-&__line {
-    display: inline-block;
-    vertical-align: middle;
-    width: 18px;
-    margin-right: 10px;
-    border-radius: 2px;
-    border: 1px solid $black;
-}
-
-&__text {
-    display: inline;
-    font-size: 14px;
-    line-height: 173.02%;
-    color: $header;
-
-    &_color {
-        color:$blue;
+    &__wrapper {
+        max-width: 800px;
+        margin-top: 16px;
     }
-}
 
-&__button {
-    margin-top: 70px;
-    width: 262px;
-    text-align: center;
-
-    @include mediaDesktopTab {
-        margin-top: 56px; 
+    &__line {
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        margin-right: 10px;
+        border-radius: 2px;
+        border: 1px solid $black;
     }
+
+    &__text {
+        display: inline;
+        font-size: 14px;
+        line-height: 173.02%;
+        color: $header;
+
+        &_color {
+            color: $blue;
+        }
+    }
+
+    &__button {
+        margin-top: 70px;
+        width: 262px;
+        text-align: center;
+
+        @include mediaDesktopTab {
+            margin-top: 56px;
+        }
+
+        @include mediaMobileMax {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include mediaMobile {
+            width: auto;
+        }
+    }
+
+    &__button-link {
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        border-radius: 2px;
+        padding: 13px 20px;
+        text-decoration: none;
+        cursor: url(./../img/cursor_black.svg), pointer;
+        background: $blue;
+        color: #FFFFFF;
+        transition: all 0.2s ease-in-out;
+
+
+    }
+
+    &__button-link:hover {
+        transform: translateY(-3px);
+        background: $light-blue;
+
+    }
+
 }
-
-&__button-link {
-    display: block;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 22px;
-    letter-spacing: -0.41px;
-    border-radius: 2px;
-    padding: 13px 20px;
-    text-decoration: none;
-    cursor: url(./../img/cursor_black.svg), pointer;
-    background: $blue;
-    color: #FFFFFF;
-    transition: all 0.2s ease-in-out ;
-
-
-}
-
-&__button-link:hover {
-    transform: translateY(-3px);
-    background: $light-blue;
-
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-

@@ -8,36 +8,47 @@
     @include mediaDesktop {
         grid-template-columns: 458px 1fr;
         column-gap: 40px;
-        padding-top: 96px; 
+        padding-top: 96px;
         padding-bottom: 96px;
     }
 
     @include mediaDesktopTab {
-        grid-template-columns: 373px 1fr; 
+        grid-template-columns: 373px 1fr;
         column-gap: 26px;
-        padding-top: 46px; 
+        padding-top: 46px;
         padding-bottom: 90px;
     }
 
     @include mediaTablet {
-        grid-template-columns: 233px 1fr;  
-        padding-top: 40px; 
+        grid-template-columns: 233px 1fr;
+        padding-top: 40px;
         padding-bottom: 86px;
     }
 
     @include mediaTabletMob {
-        grid-template-columns: 140px 1fr; 
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: calc(50% - 264px);
+        grid-template-columns: 1fr 392px;
+        width: auto;
         column-gap: 0px;
-        padding-bottom: 40px;     
-    } 
+        padding-bottom: 40px;
+    }
 
     @include mediaMobileMax {
+        margin-left: auto;
+        margin-right: auto;
+        width: 464px;
         grid-template-columns: 1fr;
-        padding-top: 0px;   
+        padding-top: 0px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     @include mediaMobile {
-        padding-bottom: 64px; 
+        padding-bottom: 64px;
+        width: 320px;
     }
 
     &__left-box {
@@ -51,25 +62,30 @@
             min-height: 328px;
             background-size: 458px;
         }
-        @include mediaDesktopTab  {
+
+        @include mediaDesktopTab {
             min-height: 267px;
-            background-size: 373px; 
+            background-size: 373px;
         }
+
         @include mediaTablet {
             min-height: 167px;
-            background-size: 233px; 
+            background-size: 233px;
         }
+
         @include mediaTabletMob {
             background-size: 255px;
-            background-position: left -100px top; 
-        } 
+            background-position: right;
+        }
+
         @include mediaMobileMax {
             background-size: 341px;
             min-height: 244px;
-            background-position: top center; 
+            background-position: top center;
         }
+
         @include mediaMobile {
-            background-size: 300px;  
+            background-size: 300px;
         }
     }
 
@@ -81,26 +97,31 @@
         width: 66px;
 
         @include mediaDesktop {
-            right: 72px; 
+            right: 72px;
             top: 272px;
         }
+
         @include mediaDesktopTab {
-            right: 54px; 
+            right: 54px;
             top: 221px;
         }
+
         @include mediaTablet {
-            right: 20px; 
+            right: 20px;
             top: 158px;
         }
+
         @include mediaTabletMob {
             right: 16px;
-            top: 145px; 
+            top: 145px;
         }
+
         @include mediaMobileMax {
             right: 40px;
         }
+
         @include mediaMobile {
-            top: 170px; 
+            top: 170px;
         }
     }
 
@@ -131,31 +152,55 @@
     }
 
     &__right-box {
-        background-image: url(./../img/trinity-network.svg);
-        background-repeat: no-repeat;
-        background-position: right 156px top 100px;
+        position: relative;
 
-        @include mediaDesktop {
-            background-position: right 56px top 56px;
-        }
-        @include mediaDesktopTab {
-            background-position: right 30px top 36px ;
-        }
-        @include mediaTablet {
-            background-size: 138px;    
-        }
-        @include mediaTabletMob {
-            background-size: 112px;
-            background-position: right 76px top 20px ;
-        }
-        @include mediaMobileMax {
-            background-position: right 30px top 76px ;
-            padding-top: 40px;
-        }
-        @include mediaMobile {
-            background-position: right -30px top 76px ; 
+        &::before {
+            position: absolute;
+            content: " ";
+            background-image: url(./../img/trinity-network.svg);
+            width: 260px;
+            height: 280px;
+            background-repeat: no-repeat;
+            right: 134px;
+            top: 110px;
+
+            @include mediaDesktop {
+                right: 40px;
+                top: 60px;
+            }
+
+            @include mediaDesktopTab {
+                right: 30px;
+                top: 30px;
+            }
+
+            @include mediaTablet {
+                background-size: 65%;
+                right: -90px;
+                top: 25px;
+            }
+
+            @include mediaTabletMob {
+                background-size: 52%;
+                right: -70px;
+                top: 10px;
+            }
+
+            @include mediaMobileMax {
+                right: -125px;
+                top: 40px;
+            }
+
+            @include mediaMobile {
+                right: -170px;
+                top: 29px;
+            }
         }
     }
+
+
+
+
 
     &__header {
         padding-top: 48px;
@@ -169,24 +214,30 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         @include mediaDesktop {
             padding-top: 0px;
             padding-bottom: 46px;
         }
+
         @include mediaDesktopTab {
             padding-top: 26px;
             padding-bottom: 100px;
         }
+
         @include mediaTablet {
             padding-top: 0px;
             padding-bottom: 31px;
         }
+
         @include mediaTabletMob {
-            padding-bottom: 43px;  
+            padding-bottom: 43px;
         }
+
         @include mediaMobileMax {
             text-align: center;
         }
+
         @include mediaMobile {
             padding-bottom: 36px;
         }
@@ -203,12 +254,14 @@
         @include mediaTablet {
             gap: 10px;
         }
+
         @include mediaMobileMax {
-            justify-content:center; 
+            justify-content: center;
         }
+
         @include mediaMobile {
             row-gap: 14px;
-            justify-content:center;  
+            justify-content: center;
         }
     }
 
@@ -238,7 +291,7 @@
     }
 
     &__right-link {
-        padding: 10px 0; 
+        padding: 10px 0;
         color: $blue;
         font-size: 18px;
         font-style: normal;
@@ -250,7 +303,7 @@
 
     &__right-link:hover {
         transform: translateY(-3px);
-        color: $light-blue; 
+        color: $light-blue;
     }
 
     &__right-svg {
@@ -261,7 +314,7 @@
         transition: fill 0.2s ease;
     }
 
-    &__right-link:hover &__right-svg{
+    &__right-link:hover &__right-svg {
         fill: $light-blue;
     }
 

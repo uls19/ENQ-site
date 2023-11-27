@@ -1694,6 +1694,7 @@ main {
   background-repeat: no-repeat;
   right: 134px;
   top: 110px;
+  z-index: -1;
 }
 @media screen and (max-width: 1440px) {
   .trinity__right-box::before {

@@ -163,6 +163,7 @@
             background-repeat: no-repeat;
             right: 134px;
             top: 110px;
+            z-index: -1;
 
             @include mediaDesktop {
                 right: 40px;
@@ -197,10 +198,6 @@
             }
         }
     }
-
-
-
-
 
     &__header {
         padding-top: 48px;
@@ -306,6 +303,7 @@
         color: $light-blue;
     }
 
+
     &__right-svg {
         vertical-align: middle;
         margin-left: 5px;
@@ -317,5 +315,6 @@
     &__right-link:hover &__right-svg {
         fill: $light-blue;
     }
+
 
 }

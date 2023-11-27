@@ -1,9 +1,15 @@
 .is_scrolled .header__top-box {
     background: rgba(16, 20, 37, 0.85);
     backdrop-filter: blur(17.5px);
+
+    @include mediaTablet {
+        background: rgba(16, 20, 37, 0); 
+        backdrop-filter: none;
+    }
 }
 
 .header {
+    position: relative;
     margin: 0 auto;
     max-width: 1920px;
     height: 718px;
@@ -31,7 +37,7 @@
         z-index: 10;
 
         @include mediaTablet {
-            position: relative; 
+       position: absolute;
         }
     }
 
@@ -85,7 +91,6 @@
                 top: 0px;
                 right: 0px;
                 background: rgba(0, 0, 0, 0.82);
-                ;
             }
 
             flex-direction: column;

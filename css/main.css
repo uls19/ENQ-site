@@ -190,8 +190,15 @@ a,
   background: rgba(16, 20, 37, 0.85);
   backdrop-filter: blur(17.5px);
 }
+@media screen and (max-width: 984px) {
+  .is_scrolled .header__top-box {
+    background: rgba(16, 20, 37, 0);
+    backdrop-filter: none;
+  }
+}
 
 .header {
+  position: relative;
   margin: 0 auto;
   max-width: 1920px;
   height: 718px;
@@ -220,7 +227,7 @@ a,
 }
 @media screen and (max-width: 984px) {
   .header__top-box {
-    position: relative;
+    position: absolute;
   }
 }
 .header__menu-box {

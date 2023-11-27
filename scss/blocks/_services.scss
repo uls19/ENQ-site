@@ -92,15 +92,15 @@
         padding-right: calc(50% - 1224px / 2);
         background-image: url(./../img/token.png);
         background-position-x: calc(50% - 404px);
+        background-size: contain;
         background-repeat: no-repeat;
 
         @include mediaDesktop {
             margin-top: 84px;
             padding-left: calc(50% - 1122px / 2);
             padding-right: calc(50% - 1122px / 2);
-            background-position-x: calc(50% - 394px);
-            background-size: 326px;
-           
+            background-size: 324px;
+            background-position-x: calc(50% - 394px);   
         }
 
         @include mediaDesktopTab {
@@ -115,7 +115,7 @@
             padding-left: calc(50% - 712px / 2);
             padding-right: calc(50% - 712px / 2);
             background-position-x: calc(50% - 360px);
-            background-size: 284px;
+            background-size: 274px;
            
     }
 
@@ -124,7 +124,6 @@
         padding-left: calc(50% - 532px / 2);
         padding-right: calc(50% - 532px / 2);
         background-position-x: calc(50% - 314px);
-        background-size: 274px;
     }
 
     @include mediaMobileMax {

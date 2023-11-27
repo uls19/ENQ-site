@@ -1,0 +1,321 @@
+.footer {
+    max-width: 1920px;
+    background: $dark;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+
+    &__content {
+        display: grid;
+        justify-items: start;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "footer__box0 . footer__box1 footer__box2 footer__box3"
+            "box box box . footer__box3";
+        padding-top: 55px;
+        padding-bottom: 20px;
+
+        @include mediaDesktop {
+            grid-template-columns: 280px 230px 216px 220px 250px;
+        }
+
+        @include mediaDesktopTab {
+            grid-template-columns: 200px 30px 220px 240px 250px;
+            grid-template-areas:
+                "footer__box0 . footer__box1 footer__box2 footer__box3"
+                "box box box box box";
+        }
+
+        @include mediaTablet {
+            grid-template-columns: 210px 240px 250px;
+            grid-template-areas:
+                "footer__box1 footer__box2 footer__box3"
+                "box box box";
+        }
+
+        @include mediaTabletMob {
+            grid-template-columns: 110px 170px 250px;
+            padding-bottom: 35px;
+        }
+
+        @include mediaMobileMax {
+            grid-template-columns: 1fr auto;
+            grid-template-areas:
+                "footer__box1 footer__box2"
+                "footer__box3 footer__box3"
+                "box box ";
+        }
+    }
+
+    &__image {
+        grid-area: footer__box0;
+
+        @include mediaDesktopTab {
+            width: 174px;
+        }
+
+        @include mediaTablet {
+            display: none;
+        }
+    }
+
+    &__box1 {
+        grid-area: footer__box1;
+    }
+
+    &__box2 {
+        grid-area: footer__box2;
+
+        @include mediaMobileMax {
+            padding-right: 10px;
+        }
+    }
+
+    &__box3 {
+        grid-area: footer__box3;
+    }
+
+    &__header-box3 {
+        margin-bottom: 12px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+
+        @include mediaMobileMax {
+            padding-left: 10px;
+        }
+    }
+
+    &__list-text {
+        margin-bottom: 12px;
+        list-style-type: none;
+    }
+
+    &__text1,
+    &__text2 {
+        padding-left: 10px;
+    }
+
+    &__text3 {
+        padding-left: 30px;
+    }
+
+    &__link-list {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+        color: $white;
+        transition: color 0.2s ease-in-out;
+    }
+
+    &__link-list:hover {
+        color: $light-blue;
+    }
+
+    &__link-list1 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #79839C;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    &__link-list1:hover {
+        color: $white;
+    }
+
+    &__list-text1 {
+        margin-bottom: 9px;
+        list-style-type: disc;
+
+    }
+
+    &__list-text1::marker {
+        color: #79839C;
+    }
+
+    &__list-text1:hover::marker {
+        color: $white;
+    }
+
+    &__system {
+        grid-area: box;
+        display: grid;
+        grid-template-columns: 180px 180px 180px 220px;
+        grid-template-rows: 48px 48px;
+        gap: 20px;
+        padding-top: 45px;
+        align-items: center;
+        grid-template-areas:
+            "miner . . ."
+            "web ios wallet pwa";
+
+        &_miner {
+            grid-area: miner;
+        }
+
+        &_web {
+            grid-area: web;
+        }
+
+        &_ios {
+            grid-area: ios;
+        }
+
+        &_wallet {
+            grid-area: wallet;
+        }
+
+        &_pwa {
+            grid-area: pwa;
+        }
+
+        @include mediaDesktopTab {
+            padding-top: 0px;
+        }
+
+        @include mediaTablet {
+            grid-template-columns: 144px 136px 168px 202px;
+            gap: 16px;
+        }
+
+        @include mediaTabletMob {
+            padding-top: 30px;
+            padding-left: 10px;
+            gap: 13px;
+            grid-template-columns: 144px 50px 176px;
+            grid-template-rows: 48px 48px 48px;
+            grid-template-areas:
+                "miner miner miner"
+                "web ios ios "
+                "pwa pwa wallet";
+        }
+
+        @include mediaMobileMax {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 48px);
+            grid-template-areas:
+                "miner"
+                "pwa"
+                "web"
+                "ios"
+                "wallet";
+
+            align-items: center;
+            margin: 0 auto;
+            padding-left: 0;
+        }
+    }
+
+    &__system-item {
+        display: flex;
+        text-align: center;
+    }
+
+    &__system-item img {
+        margin-right: 6px;
+    }
+
+    &__system-link {
+        padding: 12px 0px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: $white;
+        text-decoration: none;
+        border: 0.5px solid rgba(255, 255, 255, 0.49);
+        border-radius: 9px;
+        transition: background-color 0.3s ease-in-out;
+
+        @include mediaTablet {
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+    }
+
+    &__system-link:hover {
+        background-color: $light-blue;
+        
+
+    }
+
+    &__link-miner,
+    &__link-web,
+    &__link-ios,
+    &__link-wallet {
+        width: 174px;
+
+        @include mediaMobileMax {
+            width: 288px;
+        }
+
+        @include mediaMobile {
+            width: 260px;
+        }
+    }
+
+    &__link-pwa {
+        width: 220px;
+
+        @include mediaMobileMax {
+            width: 288px;
+        }
+
+        @include mediaMobile {
+            width: 260px;
+        }
+    }
+
+    &__line {
+        max-width: 1440px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.11);
+        margin: auto;
+
+        @include mediaDesktopTab {
+            max-width: 1248px;
+        }
+    }
+
+    &__end {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #BDBDBD;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: calc(50% - 1400px / 2);
+
+        @include mediaDesktop {
+            padding-left: calc(50% - 600px);
+        }
+
+        @include mediaDesktopTab {
+            padding-left: calc(50% - 470px);
+        }
+
+        @include mediaTablet {
+            padding-left: calc(50% - 350px);
+        }
+
+        @include mediaTabletMob {
+            padding-left: calc(50% - 260px);
+        }
+
+        @include mediaMobileMax {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
